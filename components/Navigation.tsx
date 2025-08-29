@@ -33,7 +33,7 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             className="text-xl font-bold text-primary-600"
           >
-            Tyler Cyert
+            <span className="text-primary mr-2">&gt;</span>Tyler Cyert<span className="cursor-blink">_</span>
           </motion.div>
 
           {/* Desktop Navigation */}
