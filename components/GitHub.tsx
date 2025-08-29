@@ -69,7 +69,7 @@ export default function GitHub() {
               href={`https://github.com/${githubStats.username}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center gap-2 mt-auto"
+              className="btn-primary inline-flex items-center gap-2 mt-auto w-fit"
             >
               <ExternalLink className="w-4 h-4" />
               View GitHub Profile

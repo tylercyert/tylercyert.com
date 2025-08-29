@@ -71,12 +71,10 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            About Me
+            Experience
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            IT Support Specialist with expertise in cloud infrastructure, ERP systems, and technical support. 
-            Currently pursuing a Bachelor's degree in Cloud Computing at Western Governors University, 
-            bringing strong foundation in REST APIs, Python, and JavaScript.
+            Dynamic IT professional with over 8 years of experience across multiple industries. 
           </p>
         </motion.div>
 
@@ -138,48 +136,99 @@ export default function About() {
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
             Certifications & Education
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card p-8">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-left">Certifications</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
-                <div className="flex items-center">
-                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">ITIL V4</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* IT Certifications Card */}
+            <div className="card p-6">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-left">IT Certifications</h4>
+              <div className="flex flex-col gap-y-2">
+                <div className="flex items-start">
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">CompTIA A+</span>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">CompTIA Security+</span>
+                <div className="flex items-start">
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">ITIL V4</span>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">CompTIA Network+</span>
+                <div className="flex items-start">
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">CompTIA Security+</span>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">CompTIA Cloud+</span>
+                <div className="flex items-start">
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">CompTIA Network+</span>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">Azure Fundamentals</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">AWS Cloud Practitioner</span>
+                <div className="flex items-start">
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">LPI Linux Essentials</span>
                 </div>
               </div>
             </div>
-            <div className="card p-8">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-left">Education</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4 text-left">
-                <div>
-                  <h5 className="font-medium text-gray-900 dark:text-white">Western Governors University</h5>
-                  <p className="text-gray-700 dark:text-gray-300">BS, Cloud Computing</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">2023-2025</p>
+
+            {/* Cloud Certifications Card */}
+            <div className="card p-6">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-left">Cloud Certifications</h4>
+              <div className="flex flex-col gap-y-2">
+                <div className="flex items-start">
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">CompTIA Cloud+</span>
                 </div>
-                <div>
-                  <h5 className="font-medium text-gray-900 dark:text-white">Winona State University</h5>
-                  <p className="text-gray-700 dark:text-gray-300">Computer Science</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">2015 - 2021</p>
+                <div className="flex items-start">
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">Azure Fundamentals</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">AWS Cloud Practitioner</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-gray-400 dark:text-gray-500 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed text-left">
+                    Azure Developer Associate
+                    <sup className="text-xs text-primary-600 dark:text-primary-400 ml-1 font-medium">coming soon!</sup>
+                  </span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-gray-400 dark:text-gray-500 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed text-left">
+                    AWS Certified Solutions Architect
+                    <sup className="text-xs text-primary-600 dark:text-primary-400 ml-1 font-medium">coming soon!</sup>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Western Governors University Card */}
+            <div className="card p-6">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 text-left">Western Governors University</h4>
+              <div className="space-y-2 text-left">
+                <p className="text-gray-700 dark:text-gray-300 font-medium">BS, Cloud Computing</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">2023-2025</p>
+                <div className="pt-2">
+                  <h5 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 text-left">Key Focus Areas:</h5>
+                  <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 text-left">
+                    <li className="text-left">• Cloud Infrastructure & Architecture</li>
+                    <li className="text-left">• DevOps & CI/CD Practices</li>
+                    <li className="text-left">• Security & Compliance</li>
+                    <li className="text-left">• Automation & Orchestration</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Winona State University Card */}
+            <div className="card p-6">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 text-left">Winona State University</h4>
+              <div className="space-y-2 text-left">
+                <p className="text-gray-700 dark:text-gray-300 font-medium">Computer Science</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">2015 - 2021</p>
+                <div className="pt-2">
+                  <h5 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 text-left">Key Focus Areas:</h5>
+                  <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 text-left">
+                    <li className="text-left">• Software Engineering</li>
+                    <li className="text-left">• Data Structures & Algorithms</li>
+                    <li className="text-left">• Web Development</li>
+                    <li className="text-left">• Database Systems</li>
+                  </ul>
                 </div>
               </div>
             </div>

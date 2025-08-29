@@ -10,7 +10,7 @@ export default function Navigation() {
   const { theme, toggleTheme } = useTheme()
 
   const navItems = [
-    { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'GitHub', href: '#github' },
   ]

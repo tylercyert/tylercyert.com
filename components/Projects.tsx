@@ -48,7 +48,7 @@ export default function Projects() {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Here are some of the projects I've built that showcase my skills and passion for creating innovative web applications.
+            Here are some of my favorite projects that I've built.
           </p>
         </motion.div>
 
