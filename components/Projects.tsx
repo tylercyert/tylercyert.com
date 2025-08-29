@@ -9,7 +9,7 @@ const projects = [
     name: 'REMHunter.com',
     icon: <Moon className="w-6 h-6" />,
     description: 'An intelligent sleep cycle calculator that provides personalized bedtime and wake time recommendations based on sleep science, featuring multiple calculation modes and real-time recommendations.',
-    technologies: ['Python', 'Flask', 'HTML/CSS', 'JavaScript'],
+    technologies: ['Python', 'Flask', 'JavaScript'],
     liveUrl: 'https://remhunter.com',
     codeUrl: 'https://github.com/tylercyert/remhunter'
   },
@@ -18,7 +18,7 @@ const projects = [
     name: 'POMOraid.com',
     icon: <Gamepad2 className="w-6 h-6" />,
     description: 'A dungeon-crawling RPG game that combines productivity with adventure, featuring character progression, zone exploration, and strategic combat encounters.',
-    technologies: ['React', 'TypeScript', 'CSS', 'PWA'],
+    technologies: ['React', 'TypeScript', 'PWA'],
     liveUrl: 'https://pomoraid.com',
     codeUrl: 'https://github.com/tylercyert/pomoraid'
   },
