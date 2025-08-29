@@ -84,11 +84,11 @@ export default function About() {
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="card p-8 hover:shadow-xl transition-all duration-300"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="card p-8"
             >
               <div className="flex items-center mb-4">
                 <div className="text-primary mr-3">
@@ -129,10 +129,10 @@ export default function About() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
