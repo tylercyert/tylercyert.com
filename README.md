@@ -118,12 +118,4 @@ CMD ["npm", "start"]
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## Contact
-
-- **Email**: tyler@example.com
-- **LinkedIn**: [linkedin.com/in/tylercyert](https://linkedin.com/in/tylercyert)
-- **GitHub**: [github.com/TylerCyert](https://github.com/TylerCyert)
-
----
-
 Built with ❤️ using Next.js, Tailwind CSS, and Framer Motion.
