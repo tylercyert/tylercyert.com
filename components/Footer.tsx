@@ -22,11 +22,11 @@ export default function Footer() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
-              href="mailto:cyert@pm.me"
+              href="mailto:tyler@tylercyert.com"
               className="flex items-center gap-3 text-lg hover:text-primary transition-colors duration-200"
             >
               <Mail className="w-5 h-5" />
-              cyert@pm.me
+              tyler@tylercyert.com
             </a>
             
             <a
