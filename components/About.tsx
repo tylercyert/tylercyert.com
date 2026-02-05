@@ -6,16 +6,16 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react'
 const experiences = [
   {
     id: 1,
-    title: 'IT Support Specialist',
+    title: 'Systems Engineer',
     company: 'Sound Productions',
     location: 'Irving, Texas',
     period: 'August 2024 - Present',
-    description: 'Leveraging IT expertise to optimize onsite and cloud infrastructure, manage virtual machines, and deliver actionable insights through custom dashboards and ERP systems.',
+    description: 'Systems Engineer focused on ERP implementations, integrations, and process automation. I own system architecture, integration strategy, and internal enablement for cross-functional teams.',
     achievements: [
-      'Implemented ERP, EDI, and sales tools',
-      'Developed internal dashboards for insights',
-      'Managed on-premise servers and cloud VMs',
-      'Provided Tier 2+ support for platforms'
+      'Led Acumatica ERP implementation and Shopify/CRM integrations',
+      'Designed integration architecture and API data mappings for order, inventory, and customer syncs',
+      'Built workflow automations to reduce manual processing and improve data accuracy',
+      'Partnered with stakeholders to gather requirements and define technical roadmaps'
     ]
   },
   {
@@ -74,7 +74,7 @@ export default function About() {
             Experience
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Dynamic IT professional with over 8 years of experience across multiple industries. 
+            Solutions-focused Systems Engineer specializing in ERP implementations, integrations, and workflow automation. I design systems and processes that improve operational efficiency and deliver measurable business impact.
           </p>
         </motion.div>
 
@@ -124,6 +124,44 @@ export default function About() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="card p-6">
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Business Systems & Integrations</h4>
+            <ul className="text-sm text-muted-foreground space-y-1">
+              <li>Acumatica ERP implementations</li>
+              <li>Shopify & CRM integrations</li>
+              <li>API design & data mapping</li>
+            </ul>
+          </div>
+
+          <div className="card p-6">
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Process Automation</h4>
+            <ul className="text-sm text-muted-foreground space-y-1">
+              <li>Workflow automation & orchestration</li>
+              <li>EDI & pipeline automation</li>
+              <li>Operational tooling & scripts</li>
+            </ul>
+          </div>
+
+          <div className="card p-6">
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Cloud & Infrastructure</h4>
+            <ul className="text-sm text-muted-foreground space-y-1">
+              <li>Cloud architecture (AWS/Azure/GCP)</li>
+              <li>VMs, IaC, and platform optimization</li>
+              <li>Monitoring & observability</li>
+            </ul>
+          </div>
+
+          <div className="card p-6">
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Solution Architecture</h4>
+            <ul className="text-sm text-muted-foreground space-y-1">
+              <li>Systems design & data modeling</li>
+              <li>Stakeholder discovery & requirement mapping</li>
+              <li>Technical roadmaps & enablement</li>
+            </ul>
+          </div>
         </div>
 
         <motion.div
@@ -181,18 +219,8 @@ export default function About() {
                   <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">AWS Cloud Practitioner</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-gray-400 dark:text-gray-500 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
-                  <span className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed text-left">
-                    Azure Developer Associate
-                    <sup className="text-xs text-primary-600 dark:text-primary-400 ml-1 font-medium">coming soon!</sup>
-                  </span>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-gray-400 dark:text-gray-500 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
-                  <span className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed text-left">
-                    AWS Certified Solutions Architect
-                    <sup className="text-xs text-primary-600 dark:text-primary-400 ml-1 font-medium">coming soon!</sup>
-                  </span>
+                  <span className="text-primary-600 dark:text-primary-400 mr-2 text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-left">AWS Certified Solutions Architect</span>
                 </div>
               </div>
             </div>

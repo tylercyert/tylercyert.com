@@ -10,9 +10,9 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'Tyler Cyert - Portfolio | Cloud/IT/Software Professional',
-  description: 'Professional portfolio of Tyler Cyert, showcasing expertise in cloud computing, IT infrastructure, software development, and innovative projects including productivity RPG games and web applications.',
-  keywords: ['Tyler Cyert', 'Portfolio', 'Cloud Computing', 'IT Professional', 'Software Developer', 'DevOps', 'Web Development', 'React', 'Next.js', 'TypeScript', 'Productivity Tools', 'RPG Games'],
+  title: 'Tyler Cyert — ERP Solutions Engineer & Systems Architect',
+  description: 'Tyler Cyert — ERP Solutions Engineer specializing in ERP implementations, systems integrations, workflow automation, and business process optimization. Experience designing Acumatica and Shopify integrations, CRM pipelines, and cloud infrastructure to enable operational excellence.',
+  keywords: ['Tyler Cyert', 'ERP', 'Solutions Engineer', 'Systems Engineer', 'Business Systems', 'Integrations', 'Workflow Automation', 'Acumatica', 'Shopify', 'CRM', 'Cloud Architecture', 'Process Optimization'],
   authors: [{ name: 'Tyler Cyert' }],
   creator: 'Tyler Cyert',
   publisher: 'Tyler Cyert',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://tylercyert.com',
-    title: 'Tyler Cyert - Portfolio | Cloud/IT/Software Professional',
-    description: 'Professional portfolio showcasing cloud computing expertise, IT infrastructure, software development, and innovative productivity tools.',
+    title: 'Tyler Cyert — ERP Solutions Engineer & Systems Architect',
+    description: 'Portfolio highlighting ERP implementations, integrations, process automation, and systems architecture focused on business outcomes.',
     siteName: 'Tyler Cyert Portfolio',
     images: [
       {
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tyler Cyert - Portfolio | Cloud/IT/Software Professional',
-    description: 'Professional portfolio showcasing cloud computing expertise, IT infrastructure, software development, and innovative productivity tools.',
+    title: 'Tyler Cyert — ERP Solutions Engineer & Systems Architect',
+    description: 'Portfolio highlighting ERP implementations, integrations, process automation, and systems architecture focused on business outcomes.',
     images: ['/og-image.jpg'],
     creator: '@tylercyert',
   },

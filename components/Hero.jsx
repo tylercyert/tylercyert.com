@@ -179,7 +179,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-2xl md:text-3xl font-semibold text-primary mb-8"
         >
-          IT and Cloud Specialist
+          ERP Solutions Engineer · Systems & Integrations
         </motion.h2>
         
         <motion.p
@@ -188,7 +188,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
         >
-          Focused on building reliable IT solutions, supporting both cloud and onsite systems, and helping teams work more efficiently. Currently studying Cloud Computing while continuing to grow skills in modern technologies.
+          I design scalable ERP workflows and API-driven integrations that help teams operate faster and smarter. I partner with product, operations, and engineering stakeholders to translate business needs into reliable systems, automation, and measurable operational improvements.
         </motion.p>
       </div>
     </section>
