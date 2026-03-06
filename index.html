@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tyler Cyert — Systems Engineer</title>
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:        #2563eb;
+      --primary-dark:   #1d4ed8;
+      --bg:             #ffffff;
+      --bg-alt:         #f9fafb;
+      --bg-card:        #ffffff;
+      --border:         #e5e7eb;
+      --text:           #111827;
+      --text-muted:     #6b7280;
+      --nav-bg:         rgba(255,255,255,0.85);
+      --footer-bg:      #111827;
+      --footer-text:    #d1d5db;
+    }
+
+    [data-theme="dark"] {
+      --bg:             #0f172a;
+      --bg-alt:         #0f172a;
+      --bg-card:        #1e293b;
+      --border:         #334155;
+      --text:           #f1f5f9;
+      --text-muted:     #94a3b8;
+      --nav-bg:         rgba(15,23,42,0.85);
+      --footer-bg:      #020617;
+      --footer-text:    #94a3b8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Layout helpers ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 1.5rem;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a, .nav-links button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      font-family: inherit;
+    }
+
+    .nav-links a:hover, .nav-links button:hover { color: var(--primary); }
+
+    #theme-toggle {
+      background: var(--border);
+      border: none;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--text);
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+      margin: 5px 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      border-top: 1px solid var(--border);
+      padding: 0.5rem 1.5rem 1rem;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a, .mobile-menu button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-align: left;
+      padding: 0.6rem 0;
+      font-family: inherit;
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover, .mobile-menu button:hover { color: var(--primary); }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+      padding-top: 80px;
+    }
+
+    #hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      min-height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    #hero h1 .prompt { color: var(--primary); }
+
+    @keyframes blink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
+    .cursor { animation: blink 1s infinite; }
+
+    #hero h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    #hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 2rem;
+    }
+
+    /* ── Section headings ── */
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ── Experience ── */
+    #about { background: var(--bg-alt); }
+
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .exp-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0.75rem 0;
+    }
+
+    .exp-card h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .exp-card ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .exp-card ul li::before { content: "• "; }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .skill-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* Certs grid */
+    .certs-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .cert-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .cert-card ul {
+      list-style: none;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .cert-card ul li::before {
+      content: "✓ ";
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .edu-meta { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .edu-sub  { font-size: 0.8rem; font-weight: 600; margin: 0.5rem 0 0.25rem; }
+    .edu-list { list-style: none; font-size: 0.8rem; color: var(--text-muted); line-height: 1.8; }
+    .edu-list li::before { content: "• "; }
+
+    /* ── Projects ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .project-card h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-card ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .project-card ul li::before { content: "• "; }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 99px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+    }
+
+    .btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); color: #fff; }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--border);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .btn-secondary:hover { background: var(--text-muted); color: #fff; }
+
+    /* ── GitHub ── */
+    #github { background: var(--bg-alt); }
+
+    .github-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .github-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .github-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--footer-bg);
+      color: #f1f5f9;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    footer h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    footer .tagline {
+      font-size: 1.1rem;
+      color: var(--footer-text);
+      max-width: 520px;
+      margin: 0 auto 2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      color: #f1f5f9;
+      transition: color 0.2s;
+    }
+
+    .contact-links a:hover { color: #93c5fd; }
+
+    footer .copy {
+      font-size: 0.875rem;
+      color: var(--footer-text);
+      border-top: 1px solid #1e293b;
+      padding-top: 1.5rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ Navigation ══════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">&gt; Tyler Cyert<span class="cursor">_</span></div>
+
+    <ul class="nav-links">
+      <li><a href="#about">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><button id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:0.5rem;">
+      <button id="theme-toggle-mobile" class="hamburger" style="font-size:1rem;padding:6px 10px;background:var(--border);border-radius:8px;" aria-label="Toggle theme">🌙</button>
+      <button class="hamburger" id="menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about"    onclick="closeMobileMenu()">Experience</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#github"   onclick="closeMobileMenu()">GitHub</a>
+  </div>
+</nav>
+
+<!-- ══ Hero ════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <h1>
+      <span class="prompt">&gt;</span>
+      <span id="typewriter"></span><span class="cursor">_</span>
+    </h1>
+    <h2>ERP Solutions Engineer &middot; Systems &amp; Integrations</h2>
+    <p>
+      I design scalable ERP workflows and API-driven integrations that help teams operate faster
+      and smarter. I partner with product, operations, and engineering stakeholders to translate
+      business needs into reliable systems, automation, and measurable operational improvements.
+    </p>
+  </div>
+</section>
+
+<!-- ══ Experience ══════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>Experience</h2>
+      <p>Solutions-focused Systems Engineer specializing in ERP implementations, integrations, and workflow automation. I design systems and processes that improve operational efficiency and deliver measurable business impact.</p>
+    </div>
+
+    <div class="exp-grid">
+
+      <div class="card exp-card">
+        <h3>Systems Engineer</h3>
+        <p class="exp-meta">Sound Productions &mdash; Irving, Texas</p>
+        <p class="exp-meta">August 2024 &ndash; Present</p>
+        <p class="exp-desc">Systems Engineer focused on ERP implementations, integrations, and process automation. I own system architecture, integration strategy, and internal enablement for cross-functional teams.</p>
+        <h4>Key Achievements:</h4>
+        <ul>
+          <li>Led Acumatica ERP implementation and Shopify/CRM integrations</li>
+          <li>Designed integration architecture and API data mappings for order, inventory, and customer syncs</li>
+          <li>Built workflow automations to reduce manual processing and improve data accuracy</li>
+          <li>Partnered with stakeholders to gather requirements and define technical roadmaps</li>
+        </ul>
+      </div>
+
+      <div class="card exp-card">
+        <h3>IT Support Specialist</h3>
+        <p class="exp-meta">Alpha Orthopedics &amp; Sports Medicine &mdash; McKinney, Texas</p>
+        <p class="exp-meta">April 2022 &ndash; August 2024</p>
+        <p class="exp-desc">Delivered comprehensive technical support to physicians and clinical staff across three locations, enhancing operational efficiency.</p>
+        <h4>Key Achievements:</h4>
+        <ul>
+          <li>Ensured HIPAA and PCI-DSS compliance</li>
+          <li>Implemented IT solutions for patient care</li>
+          <li>Acted as technical liaison for upgrades</li>
+        </ul>
+      </div>
+
+      <div class="card exp-card">
+        <h3>Partner / Consultant</h3>
+        <p class="exp-meta">ThumBrand &mdash; Allen, Texas</p>
+        <p class="exp-meta">August 2020 &ndash; April 2022</p>
+        <p class="exp-desc">Consulted with startup founders and SMB executives to enhance digital strategies and optimize web infrastructure.</p>
+        <h4>Key Achievements:</h4>
+        <ul>
+          <li>Led discovery sessions for SaaS selection</li>
+          <li>Created conversion-optimized websites</li>
+          <li>Documented requirements and reports</li>
+        </ul>
+      </div>
+
+      <div class="card exp-card">
+        <h3>IT Support Specialist</h3>
+        <p class="exp-meta">MDH Technologies LLC &mdash; Addison, Texas</p>
+        <p class="exp-meta">April 2021 &ndash; August 2021</p>
+        <p class="exp-desc">Delivered exceptional helpdesk, phone, and chat support to over 400 endpoints for businesses in the Dallas-Fort Worth area.</p>
+        <h4>Key Achievements:</h4>
+        <ul>
+          <li>Managed cloud systems in Google Cloud and Azure</li>
+          <li>Successfully juggled multiple projects</li>
+          <li>Provided technical support across platforms</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Skills -->
+    <div class="skills-grid">
+      <div class="card skill-card">
+        <h4>Business Systems &amp; Integrations</h4>
+        <ul>
+          <li>Acumatica ERP implementations</li>
+          <li>Shopify &amp; CRM integrations</li>
+          <li>API design &amp; data mapping</li>
+        </ul>
+      </div>
+      <div class="card skill-card">
+        <h4>Process Automation</h4>
+        <ul>
+          <li>Workflow automation &amp; orchestration</li>
+          <li>EDI &amp; pipeline automation</li>
+          <li>Operational tooling &amp; scripts</li>
+        </ul>
+      </div>
+      <div class="card skill-card">
+        <h4>Cloud &amp; Infrastructure</h4>
+        <ul>
+          <li>Cloud architecture (AWS/Azure/GCP)</li>
+          <li>VMs, IaC, and platform optimization</li>
+          <li>Monitoring &amp; observability</li>
+        </ul>
+      </div>
+      <div class="card skill-card">
+        <h4>Solution Architecture</h4>
+        <ul>
+          <li>Systems design &amp; data modeling</li>
+          <li>Stakeholder discovery &amp; requirement mapping</li>
+          <li>Technical roadmaps &amp; enablement</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Certs & Education -->
+    <p class="certs-title">Certifications &amp; Education</p>
+    <div class="certs-grid">
+
+      <div class="card cert-card">
+        <h4>IT Certifications</h4>
+        <ul>
+          <li>CompTIA A+</li>
+          <li>ITIL V4</li>
+          <li>CompTIA Security+</li>
+          <li>CompTIA Network+</li>
+          <li>LPI Linux Essentials</li>
+        </ul>
+      </div>
+
+      <div class="card cert-card">
+        <h4>Cloud Certifications</h4>
+        <ul>
+          <li>CompTIA Cloud+</li>
+          <li>Azure Fundamentals</li>
+          <li>AWS Cloud Practitioner</li>
+          <li>AWS Certified Solutions Architect</li>
+        </ul>
+      </div>
+
+      <div class="card cert-card">
+        <h4>Western Governors University</h4>
+        <p style="font-size:0.9rem;font-weight:600;margin-bottom:0.25rem;">BS, Cloud Computing</p>
+        <p class="edu-meta">2023 &ndash; 2025</p>
+        <p class="edu-sub">Key Focus Areas:</p>
+        <ul class="edu-list">
+          <li>Cloud Infrastructure &amp; Architecture</li>
+          <li>DevOps &amp; CI/CD Practices</li>
+          <li>Security &amp; Compliance</li>
+          <li>Automation &amp; Orchestration</li>
+        </ul>
+      </div>
+
+      <div class="card cert-card">
+        <h4>Winona State University</h4>
+        <p style="font-size:0.9rem;font-weight:600;margin-bottom:0.25rem;">Computer Science</p>
+        <p class="edu-meta">2015 &ndash; 2021</p>
+        <p class="edu-sub">Key Focus Areas:</p>
+        <ul class="edu-list">
+          <li>Software Engineering</li>
+          <li>Data Structures &amp; Algorithms</li>
+          <li>Web Development</li>
+          <li>Database Systems</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ Projects ════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <p>Here are some of my favorite projects that I've built.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="card project-card">
+        <h3>REMHunter.com</h3>
+        <p class="project-desc">An intelligent sleep cycle calculator that provides personalized bedtime and wake time recommendations based on sleep science, featuring multiple calculation modes and real-time recommendations.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Sleep cycle optimization with 90-minute cycles</li>
+          <li>Multiple calculation modes for optimal timing</li>
+          <li>Real-time recommendations and current time integration</li>
+          <li>Responsive web interface with modern UI design</li>
+          <li>Personalized bedtime and wake time suggestions</li>
+          <li>Sleep science-based algorithms for accuracy</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn-primary" href="https://remhunter.com" target="_blank" rel="noopener noreferrer">&#8599; Visit Live Site</a>
+          <a class="btn-secondary" href="https://github.com/tylercyert/remhunter" target="_blank" rel="noopener noreferrer">&#60;/&#62; View Code</a>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <h3>POMOraid.com</h3>
+        <p class="project-desc">A dungeon-crawling RPG game that combines productivity with adventure, featuring character progression, zone exploration, and strategic combat encounters.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Character creation and customization system</li>
+          <li>Multiple game zones and environments</li>
+          <li>Equipment and inventory management</li>
+          <li>Strategic combat encounters and raid system</li>
+          <li>Productivity-focused gameplay mechanics</li>
+          <li>Progressive Web App for cross-platform access</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">PWA</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn-primary" href="https://pomoraid.com" target="_blank" rel="noopener noreferrer">&#8599; Visit Live Site</a>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <h3>FocusTones.co</h3>
+        <p class="project-desc">A professional binaural beat generator that creates customizable audio frequencies to guide your brain into optimal states for focus, creativity, and deep work, featuring real-time audio generation and immersive 3D visualization.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Real-time binaural beat generation with zero latency</li>
+          <li>Five brainwave frequency bands for different states</li>
+          <li>Interactive 3D sphere visualization</li>
+          <li>Smooth audio transitions and white noise overlay</li>
+          <li>Settings persistence and personalized preferences</li>
+          <li>Responsive design optimized for all devices</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Three.js</span>
+          <span class="tag">Web Audio API</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn-primary" href="https://focustones.co" target="_blank" rel="noopener noreferrer">&#8599; Visit Live Site</a>
+          <a class="btn-secondary" href="https://github.com/tylercyert/focustones" target="_blank" rel="noopener noreferrer">&#60;/&#62; View Code</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ GitHub ═══════════════════════════════════════════════════ -->
+<section id="github">
+  <div class="container">
+    <div class="section-header">
+      <h2>GitHub Contributions</h2>
+      <p>Check out my open source contributions and coding activity on GitHub.</p>
+    </div>
+
+    <div class="github-grid">
+      <div class="card github-card">
+        <h3>GitHub Profile</h3>
+        <p>Explore my repositories, contributions, and coding journey on GitHub.</p>
+        <a class="btn-primary" href="https://github.com/TylerCyert" target="_blank" rel="noopener noreferrer">&#8599; View GitHub Profile</a>
+      </div>
+      <div class="card github-card">
+        <h3>Get in Touch</h3>
+        <p>Interested in collaborating or have a project in mind? I'm always open to new opportunities.</p>
+        <a class="btn-primary" href="mailto:tyler@tylercyert.com">&#9993; tyler@tylercyert.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Footer ══════════════════════════════════════════════════ -->
+<footer>
+  <h3>Let's Connect</h3>
+  <p class="tagline">I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to work together or just say hello!</p>
+
+  <div class="contact-links">
+    <a href="mailto:tyler@tylercyert.com">&#9993; tyler@tylercyert.com</a>
+    <a href="https://linkedin.com/in/tyler-cyert" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+    <a href="https://github.com/TylerCyert" target="_blank" rel="noopener noreferrer">&#60;/&#62; GitHub</a>
+  </div>
+
+  <p class="copy">&copy; 2025 Tyler Cyert. Pure HTML.</p>
+</footer>
+
+<!-- ══ Scripts ═════════════════════════════════════════════════ -->
+<script>
+  // ── Dark mode ──────────────────────────────────────────────
+  const html = document.documentElement
+  const saved = localStorage.getItem('theme')
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.dataset.theme = 'dark'
+  }
+
+  function syncThemeButtons() {
+    const dark = html.dataset.theme === 'dark'
+    document.getElementById('theme-toggle').textContent = dark ? '☀️' : '🌙'
+    document.getElementById('theme-toggle-mobile').textContent = dark ? '☀️' : '🌙'
+  }
+  syncThemeButtons()
+
+  function toggleTheme() {
+    const dark = html.dataset.theme === 'dark'
+    html.dataset.theme = dark ? '' : 'dark'
+    localStorage.setItem('theme', dark ? 'light' : 'dark')
+    syncThemeButtons()
+  }
+
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme)
+  document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme)
+
+  // ── Mobile menu ────────────────────────────────────────────
+  const menuBtn = document.getElementById('menu-btn')
+  const mobileMenu = document.getElementById('mobile-menu')
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open')
+  })
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open')
+  }
+
+  // ── Typewriter ────────────────────────────────────────────
+  const el = document.getElementById('typewriter')
+  const first = 'Nice to meet you'
+  const second = "I'm Tyler Cyert"
+  let idx = 0, phase = 0 // 0=type first, 1=backspace, 2=type second
+
+  function tick() {
+    if (phase === 0) {
+      if (idx < first.length) { el.textContent = first.slice(0, ++idx); setTimeout(tick, 100) }
+      else { phase = 1; setTimeout(tick, 1000) }
+    } else if (phase === 1) {
+      if (idx > 0) { el.textContent = first.slice(0, --idx); setTimeout(tick, 60) }
+      else { phase = 2; idx = 0; setTimeout(tick, 200) }
+    } else {
+      if (idx < second.length) { el.textContent = second.slice(0, ++idx); setTimeout(tick, 100) }
+    }
+  }
+  tick()
+</script>
+
+</body>
+</html>
