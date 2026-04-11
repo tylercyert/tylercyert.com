@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
+}
