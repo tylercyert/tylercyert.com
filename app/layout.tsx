@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: "Tyler Cyert",
     template: "%s — Tyler Cyert",
   },
-  description: "Systems & Integration Engineer focused on ERP automation, API integrations, and cloud infrastructure.",
+  description: "Integration and AI platform engineer. I build the tooling teams run on — MCP servers, production AI agents, and the ERP and e-commerce integrations underneath them.",
   metadataBase: new URL("https://tylercyert.com"),
 };
 

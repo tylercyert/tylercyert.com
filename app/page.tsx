@@ -6,15 +6,18 @@ export default function Home() {
       <section>
         <h1>tyler cyert</h1>
         <p>
-          Systems &amp; Integration Engineer based in Dallas, TX. I build API-driven integrations,
-          ERP automation, and cloud infrastructure for growing companies. I also ship software on the side.
+          Integration &amp; AI platform engineer based in Bloomington, IN. I build the automation
+          and agent tooling that business operations run on — MCP servers that give LLMs safe access
+          to internal systems, production agents with human-in-the-loop approval, and the ERP and
+          e-commerce integrations underneath. I also ship software on the side.
         </p>
         <p style={{ marginTop: "0.75rem" }}>
           Currently at{" "}
           <a href="https://soundpro.com" target="_blank" rel="noopener noreferrer">
             SoundPro.com
           </a>
-          {" "}— open to remote-first engineering roles at B2B SaaS companies.
+          {" "}— open to remote-first engineering roles where integration, internal tooling, or
+          applied AI are central to the work.
         </p>
       </section>
 
@@ -25,18 +28,45 @@ export default function Home() {
 
         <div className="exp-entry">
           <div className="exp-header">
+            <span className="exp-title">Integration Engineer</span>
+            <span className="exp-dates">May 2026 — present</span>
+          </div>
+          <div className="exp-company">Sound Productions · Irving, TX (Remote)</div>
+          <ul className="exp-bullets">
+            <li>Built <strong>Model Context Protocol (MCP) servers</strong> that expose Acumatica ERP, HubSpot CRM, and EDI transaction data to agents and Claude-based tooling.</li>
+            <li>Design, ship, and operate <strong>production AI agents</strong> for internal operations workflows, with human-in-the-loop approval, audit logging, and per-run cost tracking.</li>
+            <li>Established AI governance and observability: model and tool access controls, usage policies, run tracing, token spend reporting, and failure-mode review.</li>
+            <li>Building an internal knowledge assistant in Microsoft Teams backed by a VitePress/GitHub knowledge base, pgvector retrieval, n8n orchestration, and Azure Bot Service.</li>
+            <li>Own the production integration portfolio and automation roadmap end to end — prioritization with executive, sales, and finance stakeholders, delivery, and on-call support.</li>
+          </ul>
+        </div>
+
+        <div className="exp-entry">
+          <div className="exp-header">
             <span className="exp-title">Systems Engineer</span>
-            <span className="exp-dates">2024 — present</span>
+            <span className="exp-dates">Jan 2026 — May 2026</span>
           </div>
           <div className="exp-company">Sound Productions · Irving, TX</div>
           <ul className="exp-bullets">
             <li>Built Acumatica–Shopify pricing integration generating <strong>150,000+ item prices</strong> via custom formulas.</li>
-            <li>Designed bidirectional HubSpot–Acumatica contact sync managing <strong>60,000+ records</strong> in real time.</li>
-            <li>Built EDI transaction mapping system; processed <strong>10,000+ transactions</strong> to date.</li>
-            <li>Developed <strong>30+ automation workflows</strong> enabling revenue growth without headcount growth.</li>
-            <li>Led Sage 100 → Acumatica ERP migration across 3 departments — zero downtime, no order outages.</li>
-            <li>Migrated vendor-locked knowledge base to open platform via API and data transformation tooling.</li>
-            <li>Led VOIP migration for 40-person team with zero downtime.</li>
+            <li>Designed bidirectional HubSpot–Acumatica contact sync managing <strong>60,000+ records</strong> in near real time.</li>
+            <li>Built in-house EDI transaction mapping in Acumatica; <strong>10,000+ transactions</strong> processed to date.</li>
+            <li>Shipped <strong>30+ automation workflows</strong> across order processing, fulfillment, and finance, letting operations absorb growth with flat headcount.</li>
+            <li>Built observability dashboards and alerting for integration health and automated transactions.</li>
+          </ul>
+        </div>
+
+        <div className="exp-entry">
+          <div className="exp-header">
+            <span className="exp-title">IT Support Specialist</span>
+            <span className="exp-dates">Aug 2024 — Jan 2026</span>
+          </div>
+          <div className="exp-company">Sound Productions · Irving, TX</div>
+          <ul className="exp-bullets">
+            <li>Project-managed the Sage 100 → Acumatica Cloud ERP migration across 3 departments — zero downtime, no order-processing outages.</li>
+            <li>Migrated a vendor-locked knowledge base to an open platform via API extraction and data transformation scripts.</li>
+            <li>Managed and hardened Azure VMs, servers, and endpoints to PCI-DSS standards.</li>
+            <li>Led a VoIP provider migration for a 40-person team with zero downtime.</li>
           </ul>
         </div>
 
@@ -47,7 +77,7 @@ export default function Home() {
           </div>
           <div className="exp-company">Alpha Orthopedics &amp; Sports Medicine · McKinney, TX</div>
           <ul className="exp-bullets">
-            <li>On-site IT SME across 3 clinical locations — 50+ endpoints, doctors, nurses, and executive staff.</li>
+            <li>Sole IT owner across 4 clinical locations — 50+ endpoints for doctors, nurses, and executive staff.</li>
             <li>Supported company growth from 1 to 4 locations, provisioning infrastructure for each expansion.</li>
             <li>Completed PCI Level 2 audit; maintained HIPAA compliance across all sites.</li>
           </ul>
@@ -81,7 +111,7 @@ export default function Home() {
             <Link href="https://www.nitesong.io">nitesong</Link>
           </h3>
           <p>Songwriting SaaS built for writers who want to stay in the creative flow.</p>
-          <p className="tech">Node.js · React · Tailwind · PostgreSQL</p>
+          <p className="tech">Next.js · TypeScript · Supabase · PostgreSQL · Prisma · Vercel</p>
         </div>
         <div className="project">
           <h3>
