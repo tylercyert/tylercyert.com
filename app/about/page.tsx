@@ -13,8 +13,8 @@ export default function AboutPage() {
         Hi, I&apos;m Tyler. I&apos;m an integration and AI platform engineer based in
         Bloomington, IN. My day job is building the automation and agent layer at SoundPro.com —
         MCP servers that give LLM agents safe access to Acumatica ERP and the systems around it,
-        production agents that run operations workflows under human approval, the data warehouse the
-        company reports on, and the integrations underneath all of it.
+        production agents that run operations workflows under human approval, the data warehouse I
+        architected and build with a colleague, and the integrations underneath all of it.
       </p>
       <p>
         I&apos;ve always been drawn to the seam between technical and human systems — the place
