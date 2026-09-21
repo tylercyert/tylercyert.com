@@ -33,7 +33,7 @@ export default function Home() {
             <span className="exp-title">Integration Engineer</span>
             <span className="exp-dates">May 2026 — present</span>
           </div>
-          <div className="exp-company">Sound Productions · Irving, TX (Remote)</div>
+          <div className="exp-company">Sound Productions · Remote</div>
           <ul className="exp-bullets">
             <li>Build <strong>Model Context Protocol (MCP) servers</strong> that expose Acumatica ERP, HubSpot CRM, and EDI transaction data to agents and Claude-based tooling.</li>
             <li>Design, ship, and operate <strong>production AI agents</strong> for internal operations workflows, with human-in-the-loop approval, audit logging, and per-run cost tracking.</li>
@@ -50,7 +50,7 @@ export default function Home() {
             <span className="exp-title">Systems Engineer</span>
             <span className="exp-dates">Jan 2026 — May 2026</span>
           </div>
-          <div className="exp-company">Sound Productions · Irving, TX</div>
+          <div className="exp-company">Sound Productions · Remote</div>
           <ul className="exp-bullets">
             <li>Built Acumatica–Shopify pricing integration generating <strong>150,000+ item prices</strong> via custom formulas.</li>
             <li>Designed bidirectional HubSpot–Acumatica contact sync managing <strong>60,000+ records</strong> in near real time.</li>
@@ -65,7 +65,7 @@ export default function Home() {
             <span className="exp-title">IT Support Specialist</span>
             <span className="exp-dates">Aug 2024 — Jan 2026</span>
           </div>
-          <div className="exp-company">Sound Productions · Irving, TX</div>
+          <div className="exp-company">Sound Productions · Remote</div>
           <ul className="exp-bullets">
             <li>Project-managed the Sage 100 → Acumatica migration across 3 departments — zero downtime, no order-processing outages.</li>
             <li>Migrated a vendor-locked knowledge base to an open platform via API extraction and data transformation scripts.</li>
