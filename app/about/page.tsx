@@ -10,10 +10,11 @@ export default function AboutPage() {
     <div className="prose">
       <h1>about</h1>
       <p>
-        Hi, I&apos;m Tyler. I&apos;m a Systems &amp; Integration Engineer based in Dallas, TX.
-        My day job is building the automation and integration layer at SoundPro.com —
-        connecting Acumatica ERP to external systems, designing workflows that scale,
-        and translating between engineering teams and the people who depend on those systems.
+        Hi, I&apos;m Tyler. I&apos;m an integration and AI platform engineer based in
+        Bloomington, IN. My day job is building the automation and agent layer at SoundPro.com —
+        MCP servers that give LLM agents safe access to Acumatica ERP and the systems around it,
+        production agents that run operations workflows under human approval, and the integrations
+        underneath all of it.
       </p>
       <p>
         I&apos;ve always been drawn to the seam between technical and human systems — the place
@@ -31,8 +32,8 @@ export default function AboutPage() {
       <p>
         I hold a B.S. in Cloud Computing from Western Governors University and a stack of
         certifications across Azure, AWS, CompTIA, and ITIL. I&apos;m currently open to
-        remote-first engineering roles at B2B SaaS companies where integration and automation
-        are central to the work.
+        remote-first engineering roles where integration, internal tooling, or applied AI are
+        central to the work.
       </p>
       <p>
         If that sounds like a fit —{" "}
