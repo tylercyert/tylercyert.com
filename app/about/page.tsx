@@ -11,7 +11,7 @@ export default function AboutPage() {
       <h1>about</h1>
       <p>
         Hi, I&apos;m Tyler. I&apos;m an integration and AI platform engineer based in
-        Bloomington, IN. My day job is building the automation and agent layer at SoundPro.com —
+        Bloomington, IN. My day job is building internal tools and the agent layer at SoundPro.com —
         MCP servers that give LLM agents safe access to Acumatica ERP and the systems around it,
         production agents that run operations workflows under human approval, the data warehouse I
         architected and build with a colleague, and the integrations underneath all of it.
@@ -23,7 +23,9 @@ export default function AboutPage() {
         60,000 contact records isn&apos;t interesting because of the scale — it&apos;s interesting
         because someone doesn&apos;t have to do that manually anymore. Same with the warehouse: 111
         entities modeled so a salesperson opens their own numbers instead of asking someone for a
-        report.
+        report. The same instinct is why its documentation is generated from the database catalog
+        instead of written down — a page nobody has to remember to update is a page that stays
+        true.
       </p>
       <p>
         Outside of work I build software. <a href="https://www.nitesong.io">nitesong</a> is a

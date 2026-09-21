@@ -6,11 +6,12 @@ export default function Home() {
       <section>
         <h1>tyler cyert</h1>
         <p>
-          Integration &amp; AI platform engineer based in Bloomington, IN. I build the automation
-          and agent tooling that business operations run on — MCP servers that give LLMs safe access
-          to internal systems, production agents with human-in-the-loop approval, the data warehouse
-          the company reports on, and the ERP and e-commerce integrations underneath. I also ship
-          software on the side.
+          Integration &amp; AI platform engineer based in Bloomington, IN. I build internal tools
+          and developer infrastructure, and I&apos;d rather generate them from the system they serve
+          than maintain them by hand — an ER diagram read live from the PostgreSQL catalog, a drift
+          check that fails when the database leaves its migrations behind, MCP servers that give
+          LLM agents governed access to internal systems, and the ERP and e-commerce integrations
+          underneath. I also ship software on the side.
         </p>
         <p style={{ marginTop: "0.75rem" }}>
           Currently at{" "}
@@ -34,11 +35,11 @@ export default function Home() {
           </div>
           <div className="exp-company">Sound Productions · Irving, TX (Remote)</div>
           <ul className="exp-bullets">
-            <li>Built <strong>Model Context Protocol (MCP) servers</strong> that expose Acumatica ERP, HubSpot CRM, and EDI transaction data to agents and Claude-based tooling.</li>
+            <li>Build <strong>Model Context Protocol (MCP) servers</strong> that expose Acumatica ERP, HubSpot CRM, and EDI transaction data to agents and Claude-based tooling.</li>
             <li>Design, ship, and operate <strong>production AI agents</strong> for internal operations workflows, with human-in-the-loop approval, audit logging, and per-run cost tracking.</li>
-            <li>Established AI governance and observability: model and tool access controls, usage policies, run tracing, token spend reporting, and failure-mode review.</li>
-            <li>Building an internal knowledge assistant in Microsoft Teams backed by a VitePress/GitHub knowledge base, pgvector retrieval, n8n orchestration, and Azure Bot Service.</li>
-            <li>Architected the company&apos;s <strong>data warehouse</strong> and built it with another developer — a bronze/silver Postgres model over Acumatica, HubSpot, RingCentral and Freshservice covering <strong>111 entities across 9 schemas</strong>, with schema managed as <strong>198 numbered forward migrations</strong>, drift detection, and a restore test that runs before any risky change.</li>
+            <li>Own model and tool access controls, usage policies, run tracing, token spend reporting, and failure-mode review.</li>
+            <li>Build an internal knowledge assistant in Microsoft Teams backed by a VitePress/GitHub knowledge base, pgvector retrieval, n8n orchestration, and Azure Bot Service.</li>
+            <li>Architected the company&apos;s <strong>data warehouse</strong> and built it with another developer — a bronze/silver PostgreSQL model over Acumatica, HubSpot, RingCentral and Freshservice covering <strong>111 entities across 9 schemas</strong>, with schema managed as <strong>198 numbered forward migrations</strong>, drift detection, and a restore test that runs before any risky change.</li>
             <li>Co-architected a self-hosted <strong>internal analytics platform</strong> serving <strong>156 pages</strong> — per-person, per-department and executive — generated from the warehouse, and extended the warehouse with the models it needed.</li>
             <li>Own the production integration portfolio and automation roadmap end to end — prioritization with executive, sales, and finance stakeholders, delivery, and on-call support.</li>
           </ul>
@@ -53,8 +54,8 @@ export default function Home() {
           <ul className="exp-bullets">
             <li>Built Acumatica–Shopify pricing integration generating <strong>150,000+ item prices</strong> via custom formulas.</li>
             <li>Designed bidirectional HubSpot–Acumatica contact sync managing <strong>60,000+ records</strong> in near real time.</li>
-            <li>Built in-house EDI transaction mapping in Acumatica; <strong>10,000+ transactions</strong> processed to date.</li>
-            <li>Shipped <strong>30+ automation workflows</strong> across order processing, fulfillment, and finance, letting operations absorb growth with flat headcount.</li>
+            <li>Built in-house <strong>EDI (X12)</strong> transaction mapping in Acumatica, eliminating a third-party EDI dependency; <strong>10,000+ transactions</strong> processed to date.</li>
+            <li>Shipped <strong>30+ automation workflows</strong> across order processing, fulfillment, and finance.</li>
             <li>Built observability dashboards and alerting for integration health and automated transactions.</li>
           </ul>
         </div>
@@ -66,7 +67,7 @@ export default function Home() {
           </div>
           <div className="exp-company">Sound Productions · Irving, TX</div>
           <ul className="exp-bullets">
-            <li>Project-managed the Sage 100 → Acumatica Cloud ERP migration across 3 departments — zero downtime, no order-processing outages.</li>
+            <li>Project-managed the Sage 100 → Acumatica migration across 3 departments — zero downtime, no order-processing outages.</li>
             <li>Migrated a vendor-locked knowledge base to an open platform via API extraction and data transformation scripts.</li>
             <li>Managed and hardened Azure VMs, servers, and endpoints to PCI-DSS standards.</li>
             <li>Led a VoIP provider migration for a 40-person team with zero downtime.</li>
@@ -80,7 +81,7 @@ export default function Home() {
           </div>
           <div className="exp-company">Alpha Orthopedics &amp; Sports Medicine · McKinney, TX</div>
           <ul className="exp-bullets">
-            <li>Sole IT owner across 4 clinical locations — 50+ endpoints for doctors, nurses, and executive staff.</li>
+            <li>Owned IT single-handedly across 4 clinical locations — 50+ endpoints for doctors, nurses, and executive staff.</li>
             <li>Supported company growth from 1 to 4 locations, provisioning infrastructure for each expansion.</li>
             <li>Completed PCI Level 2 audit; maintained HIPAA compliance across all sites.</li>
           </ul>
@@ -111,7 +112,7 @@ export default function Home() {
         </div>
         <div className="project">
           <h3>Operations data warehouse</h3>
-          <p>Bronze/silver Postgres warehouse over Acumatica, HubSpot, RingCentral and Freshservice — architected by me, built and maintained with another developer. Nightly incremental sync with a delete-reconcile pass, schema as numbered forward migrations, and self-updating ER and integration-status pages read live from the Postgres catalog.</p>
+          <p>Bronze/silver PostgreSQL warehouse over Acumatica, HubSpot, RingCentral and Freshservice — architected by me, built and maintained with another developer. It documents itself: the ER diagram and the integration-status page are generated live from the PostgreSQL catalog rather than hand-maintained, so a new migration shows up on its own. Nightly incremental sync with a delete-reconcile pass, schema as numbered forward migrations, and a restore test that proves the backup restores before any risky change.</p>
           <p className="tech">PostgreSQL · n8n · SQL · Docker</p>
         </div>
         <div className="project">
