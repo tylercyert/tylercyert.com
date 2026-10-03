@@ -54,7 +54,7 @@ export default function Home() {
           <ul className="exp-bullets">
             <li>Built Acumatica–Shopify pricing integration generating <strong>150,000+ item prices</strong> via custom formulas.</li>
             <li>Designed bidirectional HubSpot–Acumatica contact sync managing <strong>60,000+ records</strong> in near real time.</li>
-            <li>Built in-house <strong>EDI (X12)</strong> transaction mapping in Acumatica, eliminating a third-party EDI dependency; <strong>10,000+ transactions</strong> processed to date.</li>
+            <li>Built in-house <strong>EDI (X12)</strong> transaction mapping in Acumatica, eliminating a third-party EDI dependency; <strong>~3,000 transactions</strong> processed to date.</li>
             <li>Shipped <strong>30+ automation workflows</strong> across order processing, fulfillment, and finance.</li>
             <li>Built observability dashboards and alerting for integration health and automated transactions.</li>
           </ul>
