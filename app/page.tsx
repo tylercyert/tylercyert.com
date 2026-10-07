@@ -108,7 +108,8 @@ export default function Home() {
           <h3>
             <Link href="https://dotbox.zip">DotBox</Link>
           </h3>
-          <p>Visual builder for agentic systems. Design agent directories, roles, and configs — deploy to any machine with a single command.</p>
+          <p>Draw a multi-agent system as a graph — a lead, its agents, their skills and the handoffs between them — and DotBox turns it into the prompts that set it up. Pasted into Claude Code or Codex, the setup prompt has the agent write every instruction file, agent definition and skill itself. A static site with no backend: the graph never leaves the browser, and the prompt compiler is a pure, tested module whose round-trip test proves every generated file survives the prompt verbatim. <Link href="https://github.com/tylercyert/dotbox">Open source</Link> under Apache 2.0.</p>
+          <p className="tech">React · TypeScript · React Flow · Vite</p>
         </div>
         <div className="project">
           <h3>Operations data warehouse</h3>
