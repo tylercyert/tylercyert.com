@@ -6,12 +6,9 @@ export default function Home() {
       <section>
         <h1>tyler cyert</h1>
         <p>
-          Integration &amp; AI platform engineer based in Bloomington, IN. I build internal tools
-          and developer infrastructure, and I&apos;d rather generate them from the system they serve
-          than maintain them by hand — an ER diagram read live from the PostgreSQL catalog, a drift
-          check that fails when the database leaves its migrations behind, MCP servers that give
-          LLM agents governed access to internal systems, and the ERP and e-commerce integrations
-          underneath. I also ship software on the side.
+          Software and integration engineer based in Bloomington, IN. I build and manage internal
+          software products, from ERP and e-commerce integrations to data systems
+          and tools that help teams work with them. I also ship software on the side.
         </p>
         <p style={{ marginTop: "0.75rem" }}>
           Currently at{" "}
@@ -36,7 +33,7 @@ export default function Home() {
           <div className="exp-company">Sound Productions · Remote</div>
           <ul className="exp-bullets">
             <li>Build <strong>Model Context Protocol (MCP) servers</strong> that expose Acumatica ERP, HubSpot CRM, and EDI transaction data to agents and Claude-based tooling.</li>
-            <li>Design, ship, and operate <strong>production AI agents</strong> for internal operations workflows, with human-in-the-loop approval, audit logging, and per-run cost tracking.</li>
+            <li>Manage and develop <strong>internal software products</strong> for operations, from understanding team needs through design, delivery, and ongoing support.</li>
             <li>Own model and tool access controls, usage policies, run tracing, token spend reporting, and failure-mode review.</li>
             <li>Build an internal knowledge assistant in Microsoft Teams backed by a VitePress/GitHub knowledge base, pgvector retrieval, n8n orchestration, and Azure Bot Service.</li>
             <li>Architected the company&apos;s <strong>data warehouse</strong> and built it with another developer — a bronze/silver PostgreSQL model over Acumatica, HubSpot, RingCentral and Freshservice covering <strong>111 entities across 9 schemas</strong>, with schema managed as <strong>198 numbered forward migrations</strong>, drift detection, and a restore test that runs before any risky change.</li>

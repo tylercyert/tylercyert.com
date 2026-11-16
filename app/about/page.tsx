@@ -10,11 +10,11 @@ export default function AboutPage() {
     <div className="prose">
       <h1>about</h1>
       <p>
-        Hi, I&apos;m Tyler. I&apos;m an integration and AI platform engineer based in
-        Bloomington, IN. My day job is building internal tools and the agent layer at SoundPro.com —
-        MCP servers that give LLM agents safe access to Acumatica ERP and the systems around it,
-        production agents that run operations workflows under human approval, the data warehouse I
-        architected and build with a colleague, and the integrations underneath all of it.
+        Hi, I&apos;m Tyler. I&apos;m a software and integration engineer based in Bloomington,
+        IN. I build and manage internal software products at SoundPro.com, working across
+        integrations, data infrastructure, and the tools teams use in day-to-day operations. That
+        includes the data warehouse I architected and build with a colleague and the systems
+        connecting Acumatica ERP with the rest of the business.
       </p>
       <p>
         I&apos;ve always been drawn to the seam between technical and human systems — the place
