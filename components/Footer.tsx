@@ -12,7 +12,6 @@ export default function Footer() {
         <nav aria-label="Footer navigation">
           <Link href="/#work">Selected work</Link>
           <Link href="/about">About</Link>
-          <a href="https://tyl.sh" target="_blank" rel="noopener noreferrer">Writing ↗</a>
           <a href="https://github.com/tylercyert" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/tyler-cyert/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           <a href="mailto:tyler@tylercyert.com">Email ↗</a>

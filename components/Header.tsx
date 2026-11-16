@@ -12,7 +12,6 @@ export default function Header() {
           <Link href="/#work">Work</Link>
           <Link href="/#projects">Projects</Link>
           <Link href="/about">About</Link>
-          <a href="https://tyl.sh" target="_blank" rel="noopener noreferrer">Writing <span aria-hidden="true">↗</span></a>
         </nav>
         <a className="header-contact" href="mailto:tyler@tylercyert.com">Let&apos;s talk <span aria-hidden="true">↗</span></a>
       </div>

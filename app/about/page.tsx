@@ -85,7 +85,7 @@ export default function AboutPage() {
           </div>
           <div className="background-aside">
             <span>OUTSIDE WORK</span>
-            <p>I build products like <a href="https://github.com/tylercyert/poko" target="_blank" rel="noopener noreferrer">Poko ↗</a> and <a href="https://dotbox.zip" target="_blank" rel="noopener noreferrer">DotBox ↗</a>, and write at <a href="https://tyl.sh" target="_blank" rel="noopener noreferrer">tyl.sh ↗</a> about building, technology, and what I learn along the way.</p>
+            <p>I build products like <a href="https://github.com/tylercyert/poko" target="_blank" rel="noopener noreferrer">Poko ↗</a> and <a href="https://dotbox.zip" target="_blank" rel="noopener noreferrer">DotBox ↗</a> to explore new ways of learning and working.</p>
           </div>
         </div>
       </section>

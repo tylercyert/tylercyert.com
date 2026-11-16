@@ -7,7 +7,7 @@ export default function Home() {
       <section className="hero shell" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow"><span className="eyebrow-dot" /> Tyler Cyert / Bloomington, Indiana</p>
-          <h1 id="hero-title">I build the software <em>businesses run on.</em></h1>
+          <h1 id="hero-title">I build <em>business backbones.</em></h1>
           <p className="hero-lede">
             I ship internal products, integrations, and features that turn complex operations into
             reliable tools people actually use.
@@ -91,7 +91,11 @@ export default function Home() {
           <div className="case-visual integration-visual" aria-hidden="true">
             <div className="visual-caption">A RELIABLE FLOW</div>
             <div className="integration-node">ERP <span>source of truth</span></div>
-            <div className="integration-path"><span>↘</span><span>↓</span><span>↙</span></div>
+            <svg className="integration-connectors" viewBox="0 0 300 96" preserveAspectRatio="none" focusable="false" aria-hidden="true">
+              <path d="M150 0 V34 M50 34 H250 M50 34 V83 M150 34 V83 M250 34 V83" />
+              <path d="M44 77 L50 85 L56 77 M144 77 L150 85 L156 77 M244 77 L250 85 L256 77" />
+              <circle cx="150" cy="34" r="4" />
+            </svg>
             <div className="integration-destinations">
               <div>COMMERCE <small>prices</small></div>
               <div>CRM <small>contacts</small></div>
@@ -126,9 +130,6 @@ export default function Home() {
               <div><span>02</span> Modeled data</div>
               <div><span>03</span> Useful reporting</div>
             </div>
-            <div className="warehouse-grid">
-              <span /><span /><span /><span /><span /><span /><span /><span /><span />
-            </div>
             <div className="visual-foot">Illustrative data flow</div>
           </div>
         </article>
@@ -159,18 +160,18 @@ export default function Home() {
             </article>
             <article className="project-card project-dotbox">
               <div className="project-copy">
-                <span className="project-label">LIVE PRODUCT / AGENT TOOLING</span>
+                <span className="project-label">LIVE DEMO / UPCOMING WORKSPACE PREVIEW</span>
                 <h3>DotBox</h3>
-                <p>Draw agents, skills, and handoffs as a graph, then copy one setup prompt for a coding agent. It runs in the browser.</p>
-                <div className="project-links">
-                  <a href="https://dotbox.zip" target="_blank" rel="noopener noreferrer">Try DotBox <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/tylercyert/dotbox" target="_blank" rel="noopener noreferrer">Explore the code <span aria-hidden="true">↗</span></a>
-                </div>
+                <p>Design an AI agent team visually, then copy setup prompts and generated files into your coding agent. A redesigned workspace is in progress.</p>
+                <a href="https://dotbox.zip/app" target="_blank" rel="noopener noreferrer">Try the current demo <span aria-hidden="true">↗</span></a>
               </div>
-              <div className="dotbox-stage"><Image src="/work/dotbox-graph.png" alt="DotBox graph editor showing a software development agent team" width={1519} height={949} /></div>
+              <div className="dotbox-stage">
+                <Image src="/work/dotbox-workspace-preview.png" alt="Preview of the upcoming DotBox workspace showing a product development agent graph" width={1519} height={949} />
+                <span className="dotbox-preview-label">Upcoming redesign preview</span>
+              </div>
             </article>
           </div>
-          <p className="more-projects">Also building <a href="https://www.nitesong.io" target="_blank" rel="noopener noreferrer">nitesong ↗</a>, a songwriting tool, and writing about the work at <a href="https://tyl.sh" target="_blank" rel="noopener noreferrer">tyl.sh ↗</a>.</p>
+          <p className="more-projects">Also building <a href="https://www.nitesong.io" target="_blank" rel="noopener noreferrer">nitesong ↗</a>, a songwriting tool.</p>
         </div>
       </section>
 

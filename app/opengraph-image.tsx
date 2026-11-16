@@ -19,8 +19,8 @@ export default function OpenGraphImage() {
       <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
         <div style={{ display: "flex", fontSize: 21, letterSpacing: 3, color: "#3158d5", fontWeight: 700 }}>SOFTWARE &amp; SYSTEMS</div>
         <div style={{ display: "flex", flexDirection: "column", fontSize: 82, lineHeight: 1.06, letterSpacing: -5, fontWeight: 700 }}>
-          <span>I build the software</span>
-          <span style={{ color: "#3158d5" }}>businesses run on.</span>
+          <span>I build</span>
+          <span style={{ color: "#3158d5" }}>business backbones.</span>
         </div>
       </div>
       <div style={{ display: "flex", justifyContent: "space-between", borderTop: "2px solid #17211e", paddingTop: 20, fontSize: 21 }}>
