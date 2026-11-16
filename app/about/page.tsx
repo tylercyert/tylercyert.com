@@ -11,10 +11,10 @@ export default function AboutPage() {
       <h1>about</h1>
       <p>
         Hi, I&apos;m Tyler. I&apos;m a software and integration engineer based in Bloomington,
-        IN. I build and manage internal software products at SoundPro.com, working across
-        integrations, data infrastructure, and the tools teams use in day-to-day operations. That
-        includes the data warehouse I architected and build with a colleague and the systems
-        connecting Acumatica ERP with the rest of the business.
+        IN. At SoundPro.com, I build and manage internal software products. I ship integrations
+        and features and help teams adopt new technology. That work includes the data warehouse I
+        architected and build with a colleague and the systems connecting Acumatica ERP with the
+        rest of the business.
       </p>
       <p>
         I&apos;ve always been drawn to the seam between technical and human systems — the place

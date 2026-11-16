@@ -6,9 +6,10 @@ export default function Home() {
       <section>
         <h1>tyler cyert</h1>
         <p>
-          Software and integration engineer based in Bloomington, IN. I build and manage internal
-          software products, from ERP and e-commerce integrations to data systems
-          and tools that help teams work with them. I also ship software on the side.
+          Software and integration engineer based in Bloomington, IN. I ship software,
+          integrations, and features for internal teams, help them adopt new technology, and
+          manage the products over time. My work spans ERP, e-commerce, and data systems. I also
+          build software on the side.
         </p>
         <p style={{ marginTop: "0.75rem" }}>
           Currently at{" "}
@@ -33,7 +34,7 @@ export default function Home() {
           <div className="exp-company">Sound Productions · Remote</div>
           <ul className="exp-bullets">
             <li>Build <strong>Model Context Protocol (MCP) servers</strong> that expose Acumatica ERP, HubSpot CRM, and EDI transaction data to agents and Claude-based tooling.</li>
-            <li>Manage and develop <strong>internal software products</strong> for operations, from understanding team needs through design, delivery, and ongoing support.</li>
+            <li>Ship <strong>internal software products</strong>, integrations, and features for operations, then support them as teams put new technology to work.</li>
             <li>Own model and tool access controls, usage policies, run tracing, token spend reporting, and failure-mode review.</li>
             <li>Build an internal knowledge assistant in Microsoft Teams backed by a VitePress/GitHub knowledge base, pgvector retrieval, n8n orchestration, and Azure Bot Service.</li>
             <li>Architected the company&apos;s <strong>data warehouse</strong> and built it with another developer — a bronze/silver PostgreSQL model over Acumatica, HubSpot, RingCentral and Freshservice covering <strong>111 entities across 9 schemas</strong>, with schema managed as <strong>198 numbered forward migrations</strong>, drift detection, and a restore test that runs before any risky change.</li>
