@@ -41,7 +41,7 @@ export default function Home() {
             <li>Build an internal knowledge assistant in Microsoft Teams backed by a VitePress/GitHub knowledge base, pgvector retrieval, n8n orchestration, and Azure Bot Service.</li>
             <li>Architected the company&apos;s <strong>data warehouse</strong> and built it with another developer — a bronze/silver PostgreSQL model over Acumatica, HubSpot, RingCentral and Freshservice covering <strong>111 entities across 9 schemas</strong>, with schema managed as <strong>198 numbered forward migrations</strong>, drift detection, and a restore test that runs before any risky change.</li>
             <li>Co-architected a self-hosted <strong>internal analytics platform</strong> serving <strong>156 pages</strong> — per-person, per-department and executive — generated from the warehouse, and extended the warehouse with the models it needed.</li>
-            <li>Own the production integration portfolio and automation roadmap end to end — prioritization with executive, sales, and finance stakeholders, delivery, and on-call support.</li>
+            <li>Own a production portfolio of <strong>20+ integrations processing over 100,000 transactions/month</strong> — from roadmap and stakeholder prioritization through delivery, reliability, and on-call support.</li>
           </ul>
         </div>
 
@@ -54,7 +54,7 @@ export default function Home() {
           <ul className="exp-bullets">
             <li>Built Acumatica–Shopify pricing integration generating <strong>150,000+ item prices</strong> via custom formulas.</li>
             <li>Designed bidirectional HubSpot–Acumatica contact sync managing <strong>60,000+ records</strong> in near real time.</li>
-            <li>Built in-house <strong>EDI (X12)</strong> transaction mapping in Acumatica, eliminating a third-party EDI dependency; <strong>10,000+ transactions</strong> processed to date.</li>
+            <li>Built in-house <strong>EDI (X12)</strong> transaction mapping in Acumatica for <strong>5 trading partners</strong>, eliminating a third-party EDI dependency with <strong>99% straight-through processing</strong>.</li>
             <li>Shipped <strong>30+ automation workflows</strong> across order processing, fulfillment, and finance.</li>
             <li>Built observability dashboards and alerting for integration health and automated transactions.</li>
           </ul>
@@ -106,6 +106,13 @@ export default function Home() {
         <h2>projects</h2>
         <div className="project">
           <h3>
+            <Link href="https://github.com/tylercyert/poko">Poko</Link>
+          </h3>
+          <p>Public adaptive learning app for iOS, Android, and web. Its repository shows the TypeScript/Expo architecture, typed contracts for AI-generated lessons, validation, and verification workflow.</p>
+          <p className="tech">TypeScript · Expo · React Native · Claude API · SQLite</p>
+        </div>
+        <div className="project">
+          <h3>
             <Link href="https://dotbox.zip">DotBox</Link>
           </h3>
           <p>Visual builder for agentic systems. Design agent directories, roles, and configs — deploy to any machine with a single command.</p>
@@ -135,10 +142,9 @@ export default function Home() {
       <section>
         <h2>certifications</h2>
         <ul className="cert-list">
-          <li>Microsoft Certified: Azure Administrator Associate (AZ-104)</li>
           <li>AWS Certified Solutions Architect – Associate (SAA-C03)</li>
           <li>AWS Certified Cloud Practitioner (CLF-C02)</li>
-          <li>CompTIA Security+ · Network+ · Cloud+ · A+ · Project+</li>
+          <li>CompTIA Network+ · Cloud+ · A+ · Project+</li>
           <li>ITIL V4 Foundation</li>
           <li>Linux Professional Institute: Linux Essentials</li>
         </ul>
