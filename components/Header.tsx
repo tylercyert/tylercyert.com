@@ -1,45 +1,20 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-const links = [
-  { href: "/", label: "home", external: false },
-  { href: "/about", label: "about", external: false },
-  { href: "https://tyl.sh", label: "blog", external: true },
-];
 
 export default function Header() {
-  const pathname = usePathname();
-
   return (
     <header className="site-header">
-      <div className="inner">
-        <Link href="/" className="logo">
-          {">"}tylercyert.com_
+      <div className="shell header-inner">
+        <Link href="/" className="brand" aria-label="Tyler Cyert, home">
+          <span className="brand-mark" aria-hidden="true">tc</span>
+          <span className="brand-name">Tyler Cyert<span>software &amp; systems</span></span>
         </Link>
-        <nav>
-          {links.map(({ href, label, external }) =>
-            external ? (
-              <a key={href} href={href} target="_blank" rel="noopener noreferrer">
-                {label}
-              </a>
-            ) : (
-              <Link
-                key={href}
-                href={href}
-                className={
-                  pathname === href ||
-                  (href !== "/" && pathname.startsWith(href))
-                    ? "active"
-                    : undefined
-                }
-              >
-                {label}
-              </Link>
-            )
-          )}
+        <nav className="primary-nav" aria-label="Main navigation">
+          <Link href="/#work">Work</Link>
+          <Link href="/#projects">Projects</Link>
+          <Link href="/about">About</Link>
+          <a href="https://tyl.sh" target="_blank" rel="noopener noreferrer">Writing <span aria-hidden="true">↗</span></a>
         </nav>
+        <a className="header-contact" href="mailto:tyler@tylercyert.com">Let&apos;s talk <span aria-hidden="true">↗</span></a>
       </div>
     </header>
   );

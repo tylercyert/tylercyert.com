@@ -1,151 +1,207 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <section>
-        <h1>tyler cyert</h1>
-        <p>
-          Software and integration engineer based in Bloomington, IN. I ship software,
-          integrations, and features for internal teams, help them adopt new technology, and
-          manage the products over time. My work spans ERP, e-commerce, and data systems. I also
-          build software on the side.
-        </p>
-        <p style={{ marginTop: "0.75rem" }}>
-          Currently at{" "}
-          <a href="https://soundpro.com" target="_blank" rel="noopener noreferrer">
-            SoundPro.com
-          </a>
-          {" "}— open to remote-first engineering roles where integration, internal tooling, or
-          applied AI are central to the work.
-        </p>
-      </section>
-
-      <hr />
-
-      <section>
-        <h2>experience</h2>
-
-        <div className="exp-entry">
-          <div className="exp-header">
-            <span className="exp-title">Integration Engineer</span>
-            <span className="exp-dates">May 2026 — present</span>
+      <section className="hero shell" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <p className="eyebrow"><span className="eyebrow-dot" /> Tyler Cyert / Bloomington, Indiana</p>
+          <h1 id="hero-title">I build the software <em>businesses run on.</em></h1>
+          <p className="hero-lede">
+            I ship internal products, integrations, and features that turn complex operations into
+            reliable tools people actually use.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a>
+            <a className="button button-text" href="mailto:tyler@tylercyert.com">Get in touch <span aria-hidden="true">↗</span></a>
           </div>
-          <div className="exp-company">Sound Productions · Remote</div>
-          <ul className="exp-bullets">
-            <li>Build <strong>Model Context Protocol (MCP) servers</strong> that expose Acumatica ERP, HubSpot CRM, and EDI transaction data to agents and Claude-based tooling.</li>
-            <li>Ship <strong>internal software products</strong>, integrations, and features for operations, then support them as teams put new technology to work.</li>
-            <li>Own model and tool access controls, usage policies, run tracing, token spend reporting, and failure-mode review.</li>
-            <li>Build an internal knowledge assistant in Microsoft Teams backed by a VitePress/GitHub knowledge base, pgvector retrieval, n8n orchestration, and Azure Bot Service.</li>
-            <li>Architected the company&apos;s <strong>data warehouse</strong> and built it with another developer — a bronze/silver PostgreSQL model over Acumatica, HubSpot, RingCentral and Freshservice covering <strong>111 entities across 9 schemas</strong>, with schema managed as <strong>198 numbered forward migrations</strong>, drift detection, and a restore test that runs before any risky change.</li>
-            <li>Co-architected a self-hosted <strong>internal analytics platform</strong> serving <strong>156 pages</strong> — per-person, per-department and executive — generated from the warehouse, and extended the warehouse with the models it needed.</li>
-            <li>Own a production portfolio of <strong>20+ integrations processing over 100,000 transactions/month as of October 2026</strong> — from roadmap and stakeholder prioritization through delivery, reliability, and on-call support.</li>
-          </ul>
+          <p className="hero-note">Software &amp; integration engineer at <a href="https://www.soundpro.com" target="_blank" rel="noopener noreferrer">Sound Productions ↗</a></p>
         </div>
-
-        <div className="exp-entry">
-          <div className="exp-header">
-            <span className="exp-title">Systems Engineer</span>
-            <span className="exp-dates">Jan 2026 — May 2026</span>
+        <div className="system-panel" aria-label="Illustration of connected business systems">
+          <div className="system-panel-top">
+            <span>FIELD NOTE / 001</span>
+            <span className="system-panel-symbol" aria-hidden="true">✳</span>
           </div>
-          <div className="exp-company">Sound Productions · Remote</div>
-          <ul className="exp-bullets">
-            <li>Built Acumatica–Shopify pricing integration generating <strong>150,000+ item prices</strong> via custom formulas.</li>
-            <li>Designed bidirectional HubSpot–Acumatica contact sync managing <strong>60,000+ records</strong> in near real time.</li>
-            <li>Built in-house <strong>EDI (X12)</strong> transaction mapping in Acumatica for <strong>5 trading partners</strong>, eliminating a third-party EDI dependency with <strong>99% straight-through processing</strong>.</li>
-            <li>Shipped <strong>30+ automation workflows</strong> across order processing, fulfillment, and finance.</li>
-            <li>Built observability dashboards and alerting for integration health and automated transactions.</li>
-          </ul>
-        </div>
-
-        <div className="exp-entry">
-          <div className="exp-header">
-            <span className="exp-title">IT Support Specialist</span>
-            <span className="exp-dates">Aug 2024 — Jan 2026</span>
+          <p className="system-panel-title">Make the<br />connections count.</p>
+          <div className="system-flow">
+            <div className="system-flow-step">
+              <span className="flow-index">01 / SOURCE</span>
+              <strong>ERP · CRM · EDI</strong>
+            </div>
+            <span className="flow-arrow" aria-hidden="true">↓</span>
+            <div className="system-flow-step system-flow-step-emphasis">
+              <span className="flow-index">02 / BUILD</span>
+              <strong>Products + integrations</strong>
+            </div>
+            <span className="flow-arrow" aria-hidden="true">↓</span>
+            <div className="system-flow-step">
+              <span className="flow-index">03 / OUTCOME</span>
+              <strong>Workflows teams trust</strong>
+            </div>
           </div>
-          <div className="exp-company">Sound Productions · Remote</div>
-          <ul className="exp-bullets">
-            <li>Project-managed the Sage 100 → Acumatica migration across 3 departments — zero downtime, no order-processing outages.</li>
-            <li>Migrated a vendor-locked knowledge base to an open platform via API extraction and data transformation scripts.</li>
-            <li>Managed and hardened Azure VMs, servers, and endpoints to PCI-DSS standards.</li>
-            <li>Led a VoIP provider migration for a 40-person team with zero downtime.</li>
-          </ul>
-        </div>
-
-        <div className="exp-entry">
-          <div className="exp-header">
-            <span className="exp-title">IT Support Specialist</span>
-            <span className="exp-dates">2022 — 2024</span>
-          </div>
-          <div className="exp-company">Alpha Orthopedics &amp; Sports Medicine · McKinney, TX</div>
-          <ul className="exp-bullets">
-            <li>Owned IT single-handedly across 4 clinical locations — 50+ endpoints for doctors, nurses, and executive staff.</li>
-            <li>Supported company growth from 1 to 4 locations, provisioning infrastructure for each expansion.</li>
-            <li>Completed PCI Level 2 audit; maintained HIPAA compliance across all sites.</li>
-          </ul>
-        </div>
-
-        <div className="exp-entry">
-          <div className="exp-header">
-            <span className="exp-title">Partner / IT Consultant</span>
-            <span className="exp-dates">2020 — 2022</span>
-          </div>
-          <div className="exp-company">ThumBrand · Allen, TX</div>
-          <ul className="exp-bullets">
-            <li>Grew client portfolio from 30 to 50 annual clients through technical project delivery.</li>
-            <li>Scaled service catalog to recurring revenue models — increased recurring revenue by 20%+.</li>
-          </ul>
+          <p className="system-panel-foot">An illustration of the work, from data to daily operations.</p>
         </div>
       </section>
 
-      <hr />
-
-      <section>
-        <h2>projects</h2>
-        <div className="project">
-          <h3>
-            <Link href="https://github.com/tylercyert/poko">Poko</Link>
-          </h3>
-          <p>Public adaptive learning app for iOS, Android, and web. Its repository shows the TypeScript/Expo architecture, typed contracts for AI-generated lessons, validation, and verification workflow.</p>
-          <p className="tech">TypeScript · Expo · React Native · Claude API · SQLite</p>
-        </div>
-        <div className="project">
-          <h3>
-            <Link href="https://dotbox.zip">DotBox</Link>
-          </h3>
-          <p>Visual builder for agentic systems. Design agent directories, roles, and configs — deploy to any machine with a single command.</p>
-        </div>
-        <div className="project">
-          <h3>Operations data warehouse</h3>
-          <p>Bronze/silver PostgreSQL warehouse over Acumatica, HubSpot, RingCentral and Freshservice — architected by me, built and maintained with another developer. It documents itself: the ER diagram and the integration-status page are generated live from the PostgreSQL catalog rather than hand-maintained, so a new migration shows up on its own. Nightly incremental sync with a delete-reconcile pass, schema as numbered forward migrations, and a restore test that proves the backup restores before any risky change.</p>
-          <p className="tech">PostgreSQL · n8n · SQL · Docker</p>
-        </div>
-        <div className="project">
-          <h3>
-            <Link href="https://www.nitesong.io">nitesong</Link>
-          </h3>
-          <p>Songwriting SaaS built for writers who want to stay in the creative flow.</p>
-          <p className="tech">Next.js · TypeScript · Supabase · PostgreSQL · Prisma · Vercel</p>
-        </div>
-        <div className="project">
-          <h3>
-            <Link href="https://bored.tyl.sh">are you bored?</Link>
-          </h3>
-          <p>A boredom coach that helps you figure out what to do — part to-do app, part motivation engine.</p>
+      <section className="proof-band" aria-label="Selected results">
+        <div className="shell proof-grid">
+          <div className="proof-item">
+            <span className="proof-number">20<span>+</span></span>
+            <p>production integrations<br />owned and supported</p>
+          </div>
+          <div className="proof-item">
+            <span className="proof-number">100K<span>+</span></span>
+            <p>integration transactions each month<br /><small>as of October 2026</small></p>
+          </div>
+          <div className="proof-item">
+            <span className="proof-number">150K<span>+</span></span>
+            <p>catalog prices<br />maintained automatically</p>
+          </div>
         </div>
       </section>
 
-      <hr />
+      <section className="section shell" id="work" aria-labelledby="work-title">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">01 / SELECTED WORK</p>
+            <h2 id="work-title">Systems with a job to do.</h2>
+          </div>
+          <p>The work is technical. The point is to make someone&apos;s day easier and the business more dependable.</p>
+        </div>
 
-      <section>
-        <h2>certifications</h2>
-        <ul className="cert-list">
-          <li>AWS Certified Solutions Architect – Associate (SAA-C03)</li>
-          <li>AWS Certified Cloud Practitioner (CLF-C02)</li>
-          <li>CompTIA Network+ · Cloud+ · A+ · Project+</li>
-          <li>ITIL V4 Foundation</li>
-          <li>Linux Professional Institute: Linux Essentials</li>
-        </ul>
+        <article className="case-study case-study-first">
+          <div className="case-aside">
+            <span className="case-index">01</span>
+            <span className="case-type">PRODUCTION INTEGRATIONS</span>
+          </div>
+          <div className="case-main">
+            <h3>Commerce, CRM, and EDI in sync.</h3>
+            <p className="case-summary">
+              Pricing, customer records, and trading-partner transactions need to move reliably
+              across systems. I built key connections and now own the integration portfolio behind
+              those operations.
+            </p>
+            <div className="case-facts">
+              <div><span>BUILT</span><p>Acumatica–Shopify pricing, a two-way HubSpot sync, and in-house EDI mapping.</p></div>
+              <div><span>RESULT</span><p>150,000+ prices maintained, 60,000+ records synchronized, and 99% straight-through EDI processing across five partners.</p></div>
+            </div>
+            <p className="case-tech">Acumatica / Shopify / HubSpot / EDI / APIs</p>
+          </div>
+          <div className="case-visual integration-visual" aria-hidden="true">
+            <div className="visual-caption">A RELIABLE FLOW</div>
+            <div className="integration-node">ERP <span>source of truth</span></div>
+            <div className="integration-path"><span>↘</span><span>↓</span><span>↙</span></div>
+            <div className="integration-destinations">
+              <div>COMMERCE <small>prices</small></div>
+              <div>CRM <small>contacts</small></div>
+              <div>EDI <small>orders</small></div>
+            </div>
+            <div className="visual-foot">Illustrative system map</div>
+          </div>
+        </article>
+
+        <article className="case-study">
+          <div className="case-aside">
+            <span className="case-index">02</span>
+            <span className="case-type">DATA FOUNDATION</span>
+          </div>
+          <div className="case-main">
+            <h3>Reporting built from the source.</h3>
+            <p className="case-summary">
+              I architected a PostgreSQL data warehouse and built it with another developer,
+              bringing operational data into a model teams could use. I also co-architected the
+              analytics layer built on top of it.
+            </p>
+            <div className="case-facts">
+              <div><span>BUILT</span><p>A bronze/silver model across operational systems, with nightly incremental sync and delete reconciliation.</p></div>
+              <div><span>RELIABILITY</span><p>Numbered schema migrations, drift checks, encrypted backups, and automated restore tests.</p></div>
+            </div>
+            <p className="case-tech">PostgreSQL / SQL / Data modeling / Reliability</p>
+          </div>
+          <div className="case-visual warehouse-visual" aria-hidden="true">
+            <div className="visual-caption">FROM SOURCE TO SIGNAL</div>
+            <div className="warehouse-layers">
+              <div><span>01</span> Operational systems</div>
+              <div><span>02</span> Modeled data</div>
+              <div><span>03</span> Useful reporting</div>
+            </div>
+            <div className="warehouse-grid">
+              <span /><span /><span /><span /><span /><span /><span /><span /><span />
+            </div>
+            <div className="visual-foot">Illustrative data flow</div>
+          </div>
+        </article>
+      </section>
+
+      <section className="section projects-section" id="projects" aria-labelledby="projects-title">
+        <div className="shell">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">02 / PUBLIC PROJECTS</p>
+              <h2 id="projects-title">Built beyond the day job.</h2>
+            </div>
+            <p>Working products and public code make the decisions behind the work easier to inspect.</p>
+          </div>
+          <div className="project-grid">
+            <article className="project-card project-poko">
+              <div className="project-copy">
+                <span className="project-label">PUBLIC REPOSITORY / MOBILE + WEB</span>
+                <h3>Poko</h3>
+                <p>An adaptive learning app that turns a goal into a path of short, interactive lessons. Built with Expo and TypeScript.</p>
+                <p className="project-note">Wildcard Segment winner at Indy Init 2026.</p>
+                <a href="https://github.com/tylercyert/poko" target="_blank" rel="noopener noreferrer">Explore the code <span aria-hidden="true">↗</span></a>
+              </div>
+              <div className="poko-stage">
+                <div className="phone phone-back"><Image src="/work/poko-path.png" alt="Poko skill path screen" width={390} height={844} /></div>
+                <div className="phone phone-front"><Image src="/work/poko-home.png" alt="Poko home screen" width={390} height={844} /></div>
+              </div>
+            </article>
+            <article className="project-card project-dotbox">
+              <div className="project-copy">
+                <span className="project-label">LIVE PRODUCT / AGENT TOOLING</span>
+                <h3>DotBox</h3>
+                <p>Draw agents, skills, and handoffs as a graph, then copy one setup prompt for a coding agent. It runs in the browser.</p>
+                <div className="project-links">
+                  <a href="https://dotbox.zip" target="_blank" rel="noopener noreferrer">Try DotBox <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/tylercyert/dotbox" target="_blank" rel="noopener noreferrer">Explore the code <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <div className="dotbox-stage"><Image src="/work/dotbox-graph.png" alt="DotBox graph editor showing a software development agent team" width={1519} height={949} /></div>
+            </article>
+          </div>
+          <p className="more-projects">Also building <a href="https://www.nitesong.io" target="_blank" rel="noopener noreferrer">nitesong ↗</a>, a songwriting tool, and writing about the work at <a href="https://tyl.sh" target="_blank" rel="noopener noreferrer">tyl.sh ↗</a>.</p>
+        </div>
+      </section>
+
+      <section className="section shell experience-section" id="experience" aria-labelledby="experience-title">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">03 / EXPERIENCE</p>
+            <h2 id="experience-title">A progression toward ownership.</h2>
+          </div>
+          <p>From supporting operations to designing and shipping the software behind them.</p>
+        </div>
+        <div className="role-list">
+          <div className="role-row"><span>2026 — NOW</span><div><h3>Integration Engineer</h3><p>Sound Productions · Internal products, integration portfolio, and technology adoption</p></div><span className="role-arrow" aria-hidden="true">↗</span></div>
+          <div className="role-row"><span>2026</span><div><h3>Systems Engineer</h3><p>Sound Productions · Pricing, CRM, EDI, automation, and reliability</p></div><span className="role-arrow" aria-hidden="true">↗</span></div>
+          <div className="role-row"><span>2024 — 2026</span><div><h3>IT Support Specialist</h3><p>Sound Productions · ERP migration and operational systems</p></div><span className="role-arrow" aria-hidden="true">↗</span></div>
+        </div>
+        <Link href="/about#career" className="inline-link">See the full path <span aria-hidden="true">↗</span></Link>
+      </section>
+
+      <section className="contact-section" id="contact" aria-labelledby="contact-title">
+        <div className="shell contact-inner">
+          <div>
+            <p className="eyebrow">04 / WHAT&apos;S NEXT</p>
+            <h2 id="contact-title">Have a system worth making work?</h2>
+            <p>I&apos;m open to senior software, integration, and internal product roles where I can own important work from problem to production.</p>
+          </div>
+          <div className="contact-actions">
+            <a className="button button-light" href="mailto:tyler@tylercyert.com">Email me <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/tyler-cyert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+          </div>
+        </div>
       </section>
     </>
   );
