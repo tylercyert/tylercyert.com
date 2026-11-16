@@ -34,8 +34,9 @@ export default function AboutPage() {
         sharp while the tools keep changing.
       </p>
       <p>
-        I hold a B.S. in Cloud Computing from Western Governors University and a stack of
-        certifications across Azure, AWS, CompTIA, and ITIL. I&apos;m currently open to
+        I hold a B.S. in Cloud Computing from Western Governors University and current
+        AWS Solutions Architect Associate, CompTIA Cloud+, and ITIL 4 Foundation certifications.
+        I&apos;m currently open to
         remote-first engineering roles where integration, internal tooling, or applied AI are
         central to the work.
       </p>
