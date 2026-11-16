@@ -39,7 +39,7 @@ export default function Home() {
             <li>Build an internal knowledge assistant in Microsoft Teams backed by a VitePress/GitHub knowledge base, pgvector retrieval, n8n orchestration, and Azure Bot Service.</li>
             <li>Architected the company&apos;s <strong>data warehouse</strong> and built it with another developer — a bronze/silver PostgreSQL model over Acumatica, HubSpot, RingCentral and Freshservice covering <strong>111 entities across 9 schemas</strong>, with schema managed as <strong>198 numbered forward migrations</strong>, drift detection, and a restore test that runs before any risky change.</li>
             <li>Co-architected a self-hosted <strong>internal analytics platform</strong> serving <strong>156 pages</strong> — per-person, per-department and executive — generated from the warehouse, and extended the warehouse with the models it needed.</li>
-            <li>Own a production portfolio of <strong>20+ integrations processing over 100,000 transactions/month</strong> — from roadmap and stakeholder prioritization through delivery, reliability, and on-call support.</li>
+            <li>Own a production portfolio of <strong>20+ integrations processing over 100,000 transactions/month as of October 2026</strong> — from roadmap and stakeholder prioritization through delivery, reliability, and on-call support.</li>
           </ul>
         </div>
 
