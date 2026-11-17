@@ -50,7 +50,7 @@ section[id] { scroll-margin-top: 108px; }
 .button-primary:hover { background: var(--blue-deep); }
 .button-text { color: var(--ink); padding-inline: 0; border-bottom: 1px solid var(--ink); border-radius: 0; }
 .hero-note { margin: 44px 0 0; color: var(--muted); font-family: var(--font-code); font-size: 11px; }
-.hero-note a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.hero-note a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 
 .system-panel { display: flex; flex-direction: column; min-height: 568px; padding: 27px; color: white; background: var(--blue); border-radius: 7px; box-shadow: 20px 20px 0 var(--blue-pale); }
 .system-panel-top { display: flex; align-items: flex-start; justify-content: space-between; font-family: var(--font-code); font-size: 11px; letter-spacing: .08em; }
