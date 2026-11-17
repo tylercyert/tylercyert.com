@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "./DecorativeIcons";
 import Link from "next/link";
 
 export default function Footer() {
@@ -12,9 +13,9 @@ export default function Footer() {
         <nav aria-label="Footer navigation">
           <Link href="/#work">Selected work</Link>
           <Link href="/about">About</Link>
-          <a href="https://github.com/tylercyert" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/tyler-cyert/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-          <a href="mailto:tyler@tylercyert.com">Email ↗</a>
+          <a href="https://github.com/tylercyert" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight /></a>
+          <a href="https://www.linkedin.com/in/tyler-cyert/" target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight /></a>
+          <a href="mailto:tyler@tylercyert.com">Email <ArrowUpRight /></a>
         </nav>
       </div>
     </footer>

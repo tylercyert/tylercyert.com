@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "@/components/DecorativeIcons";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -18,7 +19,7 @@ export default function AboutPage() {
         <div className="about-intro">
           <p>I&apos;m a software and integration engineer in Bloomington, Indiana. At Sound Productions, I build and manage internal products, ship integrations and features, and help teams bring new technology into daily work.</p>
           <p>My favorite problems sit between people and systems. A price updated automatically, a customer record that stays in sync, or a report someone can find without asking for it: each is a small piece of software that gives someone their time back.</p>
-          <a className="inline-link" href="mailto:tyler@tylercyert.com">Start a conversation <span aria-hidden="true">↗</span></a>
+          <a className="inline-link" href="mailto:tyler@tylercyert.com">Start a conversation <ArrowUpRight /></a>
         </div>
       </section>
 
@@ -73,7 +74,7 @@ export default function AboutPage() {
             <div><h3>Lead Student Technology and Resource Specialist</h3><p className="career-company">Winona State University</p><p>Ran device provisioning sessions and maintained a 1,500+ article knowledge base for students and faculty.</p></div>
           </article>
         </div>
-        <a className="inline-link" href="https://www.linkedin.com/in/tyler-cyert/" target="_blank" rel="noopener noreferrer">Full experience on LinkedIn <span aria-hidden="true">↗</span></a>
+        <a className="inline-link" href="https://www.linkedin.com/in/tyler-cyert/" target="_blank" rel="noopener noreferrer">Full experience on LinkedIn <ArrowUpRight /></a>
       </section>
 
       <section className="section about-background">
@@ -85,7 +86,7 @@ export default function AboutPage() {
           </div>
           <div className="background-aside">
             <span>OUTSIDE WORK</span>
-            <p>I build products like <a href="https://github.com/tylercyert/poko" target="_blank" rel="noopener noreferrer">Poko ↗</a> and <a href="https://dotbox.zip" target="_blank" rel="noopener noreferrer">DotBox ↗</a> to explore new ways of learning and working.</p>
+            <p>I build products like <a href="https://github.com/tylercyert/poko" target="_blank" rel="noopener noreferrer">Poko <ArrowUpRight /></a> and <a href="https://dotbox.zip" target="_blank" rel="noopener noreferrer">DotBox <ArrowUpRight /></a> to explore new ways of learning and working.</p>
           </div>
         </div>
       </section>
@@ -98,8 +99,8 @@ export default function AboutPage() {
             <p>I&apos;m interested in senior software, integration, and internal product roles where ownership and reliable delivery matter.</p>
           </div>
           <div className="contact-actions">
-            <a className="button button-light" href="mailto:tyler@tylercyert.com">Email me <span aria-hidden="true">↗</span></a>
-            <Link href="/#work">Explore selected work ↗</Link>
+            <a className="button button-light" href="mailto:tyler@tylercyert.com">Email me <ArrowUpRight /></a>
+            <Link href="/#work">Explore selected work <ArrowUpRight /></Link>
           </div>
         </div>
       </section>

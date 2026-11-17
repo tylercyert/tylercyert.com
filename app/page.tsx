@@ -1,3 +1,4 @@
+import { ArrowUpRight, ArrowDown, Starburst } from "@/components/DecorativeIcons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,15 +14,15 @@ export default function Home() {
             reliable tools people actually use.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a>
-            <a className="button button-text" href="mailto:tyler@tylercyert.com">Get in touch <span aria-hidden="true">↗</span></a>
+            <a className="button button-primary" href="#work">Explore selected work <ArrowUpRight /></a>
+            <a className="button button-text" href="mailto:tyler@tylercyert.com">Get in touch <ArrowUpRight /></a>
           </div>
-          <p className="hero-note">Software &amp; integration engineer at <a href="https://www.soundpro.com" target="_blank" rel="noopener noreferrer">Sound Productions ↗</a></p>
+          <p className="hero-note">Software &amp; integration engineer at <a href="https://www.soundpro.com" target="_blank" rel="noopener noreferrer">Sound Productions <ArrowUpRight /></a></p>
         </div>
         <div className="system-panel" aria-label="Illustration of connected business systems">
           <div className="system-panel-top">
             <span>FIELD NOTE / 001</span>
-            <span className="system-panel-symbol" aria-hidden="true">✳</span>
+            <Starburst className="system-panel-symbol" />
           </div>
           <p className="system-panel-title">Make the<br />connections count.</p>
           <div className="system-flow">
@@ -29,12 +30,12 @@ export default function Home() {
               <span className="flow-index">01 / SOURCE</span>
               <strong>ERP · CRM · EDI</strong>
             </div>
-            <span className="flow-arrow" aria-hidden="true">↓</span>
+            <ArrowDown className="flow-arrow" />
             <div className="system-flow-step system-flow-step-emphasis">
               <span className="flow-index">02 / BUILD</span>
               <strong>Products + integrations</strong>
             </div>
-            <span className="flow-arrow" aria-hidden="true">↓</span>
+            <ArrowDown className="flow-arrow" />
             <div className="system-flow-step">
               <span className="flow-index">03 / OUTCOME</span>
               <strong>Workflows teams trust</strong>
@@ -151,7 +152,7 @@ export default function Home() {
                 <h3>Poko</h3>
                 <p>An adaptive learning app that turns a goal into a path of short, interactive lessons. Built with Expo and TypeScript.</p>
                 <p className="project-note">Wildcard Segment winner at Indy Init 2026.</p>
-                <a href="https://github.com/tylercyert/poko" target="_blank" rel="noopener noreferrer">Explore the code <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/tylercyert/poko" target="_blank" rel="noopener noreferrer">Explore the code <ArrowUpRight /></a>
               </div>
               <div className="poko-stage">
                 <div className="phone phone-back"><Image src="/work/poko-path.png" alt="Poko skill path screen" width={390} height={844} /></div>
@@ -164,8 +165,8 @@ export default function Home() {
                 <h3>DotBox</h3>
                 <p>Map an AI agent team visually, define its handoffs, then generate a setup prompt and files for your coding agent.</p>
                 <div className="project-links">
-                  <a href="https://dotbox.zip/" target="_blank" rel="noopener noreferrer">Explore DotBox <span aria-hidden="true">↗</span></a>
-                  <a href="https://app.dotbox.zip/" target="_blank" rel="noopener noreferrer">Open workspace <span aria-hidden="true">↗</span></a>
+                  <a href="https://dotbox.zip/" target="_blank" rel="noopener noreferrer">Explore DotBox <ArrowUpRight /></a>
+                  <a href="https://app.dotbox.zip/" target="_blank" rel="noopener noreferrer">Open workspace <ArrowUpRight /></a>
                 </div>
               </div>
               <div className="dotbox-stage">
@@ -173,7 +174,7 @@ export default function Home() {
               </div>
             </article>
           </div>
-          <p className="more-projects">Also building <a href="https://www.nitesong.io" target="_blank" rel="noopener noreferrer">nitesong ↗</a>, a songwriting tool.</p>
+          <p className="more-projects">Also building <a href="https://www.nitesong.io" target="_blank" rel="noopener noreferrer">nitesong <ArrowUpRight /></a>, a songwriting tool.</p>
         </div>
       </section>
 
@@ -186,11 +187,11 @@ export default function Home() {
           <p>From supporting operations to designing and shipping the software behind them.</p>
         </div>
         <div className="role-list">
-          <div className="role-row"><span>2026 — NOW</span><div><h3>Integration Engineer</h3><p>Sound Productions · Internal products, integration portfolio, and technology adoption</p></div><span className="role-arrow" aria-hidden="true">↗</span></div>
-          <div className="role-row"><span>2026</span><div><h3>Systems Engineer</h3><p>Sound Productions · Pricing, CRM, EDI, automation, and reliability</p></div><span className="role-arrow" aria-hidden="true">↗</span></div>
-          <div className="role-row"><span>2024 — 2026</span><div><h3>IT Support Specialist</h3><p>Sound Productions · ERP migration and operational systems</p></div><span className="role-arrow" aria-hidden="true">↗</span></div>
+          <div className="role-row"><span>2026 — NOW</span><div><h3>Integration Engineer</h3><p>Sound Productions · Internal products, integration portfolio, and technology adoption</p></div><ArrowUpRight className="role-arrow" /></div>
+          <div className="role-row"><span>2026</span><div><h3>Systems Engineer</h3><p>Sound Productions · Pricing, CRM, EDI, automation, and reliability</p></div><ArrowUpRight className="role-arrow" /></div>
+          <div className="role-row"><span>2024 — 2026</span><div><h3>IT Support Specialist</h3><p>Sound Productions · ERP migration and operational systems</p></div><ArrowUpRight className="role-arrow" /></div>
         </div>
-        <Link href="/about#career" className="inline-link">See the full path <span aria-hidden="true">↗</span></Link>
+        <Link href="/about#career" className="inline-link">See the full path <ArrowUpRight /></Link>
       </section>
 
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
@@ -201,8 +202,8 @@ export default function Home() {
             <p>I&apos;m open to senior software, integration, and internal product roles where I can own important work from problem to production.</p>
           </div>
           <div className="contact-actions">
-            <a className="button button-light" href="mailto:tyler@tylercyert.com">Email me <span aria-hidden="true">↗</span></a>
-            <a href="https://www.linkedin.com/in/tyler-cyert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+            <a className="button button-light" href="mailto:tyler@tylercyert.com">Email me <ArrowUpRight /></a>
+            <a href="https://www.linkedin.com/in/tyler-cyert/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <ArrowUpRight /></a>
           </div>
         </div>
       </section>
