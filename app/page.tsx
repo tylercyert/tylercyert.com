@@ -142,7 +142,7 @@ export default function Home() {
               <p className="eyebrow">02 / PUBLIC PROJECTS</p>
               <h2 id="projects-title">Built beyond the day job.</h2>
             </div>
-            <p>Working products and public code make the decisions behind the work easier to inspect.</p>
+            <p>Read Poko&apos;s public code or try DotBox&apos;s live demo to see the work firsthand.</p>
           </div>
           <div className="project-grid">
             <article className="project-card project-poko">
