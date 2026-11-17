@@ -9,7 +9,7 @@ This is the source for my portfolio. I'm a software and integration engineer bui
 - **Home:** what I build, how I work, and selected projects.
 - **About:** my background and approach to shipping dependable software.
 - **Poko:** an adaptive learning app with [public code](https://github.com/tylercyert/poko).
-- **DotBox:** a [live demo](https://dotbox.zip/app) for visually designing AI agent teams. The site labels its upcoming workspace redesign as a preview.
+- **DotBox:** a live [site](https://dotbox.zip/) and [workspace](https://app.dotbox.zip/) for visually designing AI agent teams.
 
 ## Run locally
 
