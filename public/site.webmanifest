@@ -1,11 +1,11 @@
 {
-  "name": "Tyler Cyert - Portfolio",
+  "name": "Tyler Cyert — Software & Systems",
   "short_name": "Tyler Cyert",
-  "description": "Professional portfolio showcasing cloud computing expertise, IT infrastructure, software development, and innovative productivity tools.",
+  "description": "Internal products, integrations, and the software behind reliable business operations.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#f5f4ee",
+  "theme_color": "#3158d5",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -13,11 +13,6 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
     }
   ],
   "categories": ["productivity", "business", "technology"],
