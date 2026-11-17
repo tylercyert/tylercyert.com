@@ -195,7 +195,7 @@ export default function Home() {
         <div className="shell contact-inner">
           <div>
             <p className="eyebrow">04 / WHAT&apos;S NEXT</p>
-            <h2 id="contact-title">Have a system worth making work?</h2>
+            <h2 id="contact-title">Let&apos;s build software people rely on.</h2>
             <p>I&apos;m open to senior software, integration, and internal product roles where I can own important work from problem to production.</p>
           </div>
           <div className="contact-actions">
