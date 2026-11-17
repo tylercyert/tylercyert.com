@@ -124,6 +124,7 @@ section[id] { scroll-margin-top: 108px; }
 .project-copy .project-note { margin-top: 12px; color: #5a4e85; font-size: 12px; font-weight: 700; }
 .project-copy a { display: inline-flex; align-items: center; gap: 14px; margin-top: 20px; border-bottom: 1px solid currentColor; padding-bottom: 4px; color: var(--blue); font-size: 13px; font-weight: 750; }
 .project-copy a:hover { gap: 20px; }
+.project-links { display: flex; flex-wrap: wrap; gap: 0 24px; }
 .poko-stage { position: relative; flex: 1; min-height: 290px; overflow: hidden; }
 .phone { position: absolute; width: 180px; height: 390px; overflow: hidden; border: 6px solid #1b1b24; border-radius: 28px; box-shadow: 18px 18px 25px rgb(26 21 56 / .2); background: white; }
 .phone img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -131,7 +132,6 @@ section[id] { scroll-margin-top: 108px; }
 .phone-back { top: 58px; left: 52%; transform: rotate(9deg); }
 .dotbox-stage { position: relative; display: flex; align-items: flex-end; flex: 1; padding: 32px 0 0 32px; overflow: hidden; }
 .dotbox-stage img { display: block; width: 118%; height: auto; max-width: none; border: 1px solid var(--ink); border-bottom: 0; box-shadow: 0 10px 25px rgb(25 23 20 / .18); }
-.dotbox-preview-label { position: absolute; top: 45px; right: 15px; padding: 7px 10px; border: 1px solid #9bb9a3; border-radius: 3px; background: #f7faf7; color: #244332; font-family: var(--font-code); font-size: 10px; font-weight: 700; }
 .more-projects { margin: 28px 0 0; color: var(--muted); font-size: 14px; }
 .more-projects a { color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .more-projects a:hover { color: var(--blue); }

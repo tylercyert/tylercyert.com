@@ -142,7 +142,7 @@ export default function Home() {
               <p className="eyebrow">02 / PUBLIC PROJECTS</p>
               <h2 id="projects-title">Built beyond the day job.</h2>
             </div>
-            <p>Read Poko&apos;s public code or try DotBox&apos;s live demo to see the work firsthand.</p>
+            <p>Explore Poko&apos;s public code or DotBox&apos;s live workspace to see the work firsthand.</p>
           </div>
           <div className="project-grid">
             <article className="project-card project-poko">
@@ -160,14 +160,16 @@ export default function Home() {
             </article>
             <article className="project-card project-dotbox">
               <div className="project-copy">
-                <span className="project-label">LIVE DEMO / UPCOMING WORKSPACE PREVIEW</span>
+                <span className="project-label">LIVE PRODUCT / VISUAL WORKSPACE</span>
                 <h3>DotBox</h3>
-                <p>Design an AI agent team visually, then copy setup prompts and generated files into your coding agent. A redesigned workspace is in progress.</p>
-                <a href="https://dotbox.zip/app" target="_blank" rel="noopener noreferrer">Try the current demo <span aria-hidden="true">↗</span></a>
+                <p>Map an AI agent team visually, define its handoffs, then generate a setup prompt and files for your coding agent.</p>
+                <div className="project-links">
+                  <a href="https://dotbox.zip/" target="_blank" rel="noopener noreferrer">Explore DotBox <span aria-hidden="true">↗</span></a>
+                  <a href="https://app.dotbox.zip/" target="_blank" rel="noopener noreferrer">Open workspace <span aria-hidden="true">↗</span></a>
+                </div>
               </div>
               <div className="dotbox-stage">
-                <Image src="/work/dotbox-workspace-preview.png" alt="Preview of the upcoming DotBox workspace showing a product development agent graph" width={1519} height={949} />
-                <span className="dotbox-preview-label">Upcoming redesign preview</span>
+                <Image src="/work/dotbox-workspace.png" alt="DotBox's live Product development workspace showing an AI agent team and its handoffs" width={1519} height={1029} />
               </div>
             </article>
           </div>
