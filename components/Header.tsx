@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "./DecorativeIcons";
 import Link from "next/link";
 
 export default function Header() {
@@ -13,7 +14,7 @@ export default function Header() {
           <Link href="/#projects">Projects</Link>
           <Link href="/about">About</Link>
         </nav>
-        <a className="header-contact" href="mailto:tyler@tylercyert.com">Let&apos;s talk <span aria-hidden="true">↗</span></a>
+        <a className="header-contact" href="mailto:tyler@tylercyert.com">Let&apos;s talk <ArrowUpRight /></a>
       </div>
     </header>
   );
