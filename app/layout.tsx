@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     url: "https://tylercyert.com",
     title: "Tyler Cyert — Software & Integration Engineer",
     description:
-      "I build business backbones. Explore selected integrations, internal products, and public projects.",
+      "Tyler Cyert builds things, designs products, and works with agentic coding. Explore selected integrations, internal products, and public projects.",
     siteName: "Tyler Cyert",
   },
   twitter: {
     card: "summary_large_image",
     title: "Tyler Cyert — Software & Integration Engineer",
-    description: "I build business backbones.",
+    description: "Tyler Cyert builds things, designs products, and works with agentic coding.",
   },
 };
 

@@ -7,10 +7,9 @@ export default function Home() {
       <section className="hero shell" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow"><span className="eyebrow-dot" /> Tyler Cyert / Bloomington, Indiana</p>
-          <h1 id="hero-title">I build <em>business backbones.</em></h1>
+          <h1 id="hero-title">Hey, I&apos;m <em>Tyler.</em></h1>
           <p className="hero-lede">
-            I ship internal products, integrations, and features that turn complex operations into
-            reliable tools people actually use.
+            I like building things, designing products, and working with agentic coding.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a>
